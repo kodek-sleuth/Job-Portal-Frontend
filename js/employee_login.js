@@ -1,5 +1,7 @@
-document.getElementById('employee_login_form').addEventListener('submit', validateForm)
+document.getElementById('goodFeedBack').style.display='none';
+document.getElementById('badFeedBack').style.display='none';
 
+document.getElementById('employer_login_form').addEventListener('submit', validateForm)
 
 function validateForm(l)
 {
@@ -10,7 +12,14 @@ function validateForm(l)
 
     if(username==null||username=='' && password==null||password=='')
     {
-        document.getElementById('login').innerHTML='Make sure you filled all Fields';
+        $(function()
+        {
+            
+            $('#badFeedBack').show(500);
+        }
+        )
+
+        document.getElementById('badFeedBack').innerHTML='Make sure you filled all Fields';
         return false;
     }
 
@@ -19,11 +28,11 @@ function validateForm(l)
         $(function()
         {
             
-            $('#login').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('login').innerHTML='Username should have between 5 to 15 characters';
+        document.getElementById('badFeedBack').innerHTML='Username should have between 5 to 15 characters';
         return false;
     }
 
@@ -33,11 +42,11 @@ function validateForm(l)
         $(function()
         {
             
-            $('#login').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('login').innerHTML='Username should have between 5 to 15 characters';
+        document.getElementById('badFeedBack').innerHTML='Username should have between 5 to 15 characters';
         return false;
     }
 
@@ -47,9 +56,7 @@ function validateForm(l)
         let username = document.getElementById('username_employee_login').value;
         let password = document.getElementById('password_employee_login').value;
         
-        sessionStorage.setItem('Username_from_Employee', username)
-        
-        fetch('http://127.0.0.1:3000/employee/login',{
+        fetch('http://127.0.0.1:3000/employer/login',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',
@@ -63,16 +70,30 @@ function validateForm(l)
             .then((data)=> {
                 if(data.Message=='You have successfully Logged In')
                 {
+                    document.getElementById('badFeedBack').style.display='none';
+                    $(function()
+                    {
+            
+                        $('#goodFeedBack').show(500);
+                    }
+                    )
+                            
                     sessionStorage.setItem('employee_username', username)
-                    document.getElementById('login').innerHTML='You have successfully Logged In';
+                    document.getElementById('goodFeedBack').innerHTML='You have successfully Logged In';
                 }
 
                 else
                 {
                     $(function()
                         {
-                            $('#login').show(500);
-                            document.getElementById('login').innerHTML='Invalid Password or Username';
+                            $(function()
+                            {
+                    
+                                $('#badFeedBack').show(500);
+                            }
+                            )
+                            
+                            document.getElementById('badFeedBack').innerHTML='Invalid Password or Username';
                         }
                     )
                 }

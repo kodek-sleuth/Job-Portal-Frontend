@@ -1,0 +1,293 @@
+
+body
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.title 
+{
+    background: #181818;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.title_text
+{
+    text-decoration: underline;
+    font-family: 'Acme', sans-serif;
+    color: #f2f2f2;
+}
+
+.form_housing
+{
+    background: #222;
+    height: 100%;
+    padding-bottom: 30px;
+
+}
+
+.formcontrol
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    color: #fdfcfc;
+    background-color: #363636;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    width: 220px;
+    font-family: 'Bitter', serif;
+    margin-left: 45px;
+    margin-bottom: 25px;
+}
+
+.form_divs
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 35px;
+}
+
+.formcontrol_textarea
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    color: #fdfcfc;
+    background-color: #363636;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    padding: 8px 16px;
+    width: 515px;
+    font-family: 'Bitter', serif;
+    margin-left: 85px;
+}
+
+.gradient_housing
+{
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    font-family: 'Acme', sans-serif;
+    width: 100%;
+}
+
+.button
+    {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    color: #f2f2f2;
+    background: linear-gradient(to right,#f05a28 0,#e80a89 100%);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 16px;
+    width: 340px;
+    font-family: 'Bitter', serif;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+.tags
+{
+    display: flex;
+    flex-direction: row;
+    border-bottom: #f2f2f2 1px solid;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+
+.form
+{
+    padding-right: 100px;
+}
+
+.credits
+{
+    text-align: center;
+    color: #f2f2f2;
+    font-family: 'Bitter', serif;
+}
+
+.login
+{
+    color: #f2f2f2;
+    font-family: 'Bitter', serif;
+    margin-left: 20%;
+}
+
+.signup
+{
+    color: #f05a28;
+    font-family: 'Bitter', serif;
+    margin-left: 20%;
+}
+
+.formcontrol:focus
+{
+    outline: sienna;
+}
+
+.menu_icon_size
+{
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    margin-left: 80%;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.menu_icon_size_resp
+{
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    margin-left: 45%;
+    margin-top: 50px;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+.gh_text
+{
+    margin-top: 30%;
+    text-align: center;
+}
+
+#badFeedBack
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid #EA384D;
+    color: #EA384D;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    padding: 8px 16px;
+    width: 340px;
+    font-family: 'Bitter', serif;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+#goodFeedBack
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid rgb(4, 148, 4);
+    color: rgb(4, 148, 4);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    padding: 8px 16px;
+    width: 240px;
+    font-family: 'Bitter', serif;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+
+@media(max-width:900px)
+{
+    body
+    {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_divs
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formcontrol_textarea
+    {
+        width: 220px;
+        font-family: 'Bitter', serif;
+        margin-left: 25%;
+    }
+
+    .button
+    {
+       
+        width: 240px;
+        font-family: 'Bitter', serif;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-left: 30%;
+    }
+
+    .formcontrol
+    {
+        margin-left: 15%;
+        margin-bottom: 25px;
+    }
+
+    .gradient_housing
+    {
+        display: none;
+    }
+
+    .menu_icon_size_resp
+    {
+        display: block;
+        height: 25px;
+        width: 25px;
+        padding: 10px;
+        background: #f05a28;
+        -moz-border-radius: 28px;
+        -webkit-border-radius: 28px;
+        border-radius: 28px;
+        bottom: 0;
+        position: fixed;
+    }
+
+    #badFeedBack
+    {
+        width: 240px;
+        margin-left: 15%;
+        margin-bottom: 20px;
+    }
+    
+    #goodFeedBack
+    {
+       
+        margin-left: 15%;
+        margin-bottom: 50px;
+    }
+    
+
+    
+}
+

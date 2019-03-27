@@ -1,4 +1,3 @@
-
 body
 {
     margin: 0;
@@ -31,9 +30,8 @@ body
 .form_housing
 {
     background: #222;
-    height: 100%;
+    height: 100vh;
     padding-bottom: 30px;
-
 }
 
 .formcontrol
@@ -47,10 +45,11 @@ body
     font-size: 16px;
     line-height: 24px;
     padding: 8px 16px;
-    width: 220px;
+    width: 360px;
     font-family: 'Bitter', serif;
     margin-left: 45px;
     margin-bottom: 25px;
+    margin-top: 30px;
 }
 
 .form_divs
@@ -97,11 +96,11 @@ body
     font-size: 14px;
     line-height: 24px;
     padding: 8px 16px;
-    width: 340px;
+    width: 360px;
     font-family: 'Bitter', serif;
     margin-top: 20px;
     cursor: pointer;
-    margin-left: 30%;
+    margin-left: 15%;
 }
 
 .tags
@@ -116,7 +115,8 @@ body
 
 .form
 {
-    padding-right: 100px;
+    padding-right: 200px;
+    padding-left: 100px;
 }
 
 .credits
@@ -128,14 +128,14 @@ body
 
 .login
 {
-    color: #f2f2f2;
+    color: #f05a28;
     font-family: 'Bitter', serif;
     margin-left: 20%;
 }
 
 .signup
 {
-    color: #f05a28;
+    color: #f2f2f2;
     font-family: 'Bitter', serif;
     margin-left: 20%;
 }
@@ -153,6 +153,17 @@ body
     margin-left: 80%;
     margin-top: 50px;
     cursor: pointer;
+}
+
+.menu_icon_size_resp
+{
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    margin-left: 45%;
+    margin-top: 50px;
+    cursor: pointer;
+    display: none;
 
 }
 
@@ -191,7 +202,7 @@ body
     font-size: 15px;
     line-height: 14px;
     padding: 8px 16px;
-    width: 240px;
+    width: 340px;
     font-family: 'Bitter', serif;
     margin-top: 20px;
     cursor: pointer;
@@ -199,3 +210,86 @@ body
     margin-bottom: 50px;
 }
 
+@media(max-width:900px)
+{
+    body
+    {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_divs
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formcontrol_textarea
+    {
+        width: 220px;
+        font-family: 'Bitter', serif;
+        margin-left: 25%;
+    }
+
+    .button
+    {
+       
+        width: 260px;
+        font-family: 'Bitter', serif;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-left: 20%;
+    }
+
+    .formcontrol
+    {
+        margin-left: 15%;
+        margin-bottom: 25px;
+        width: 240px;
+    }
+
+    .gradient_housing
+    {
+        display: none;
+    }
+
+    .form
+    {
+        padding-left: 20px;
+    }
+
+    .menu_icon_size_resp
+    {
+        display: block;
+        height: 25px;
+        width: 25px;
+        padding: 10px;
+        background: #f05a28;
+        -moz-border-radius: 28px;
+        -webkit-border-radius: 28px;
+        border-radius: 28px;
+        position: fixed;
+        margin-bottom: 100px;
+    }
+
+    #badFeedBack
+    {
+        width: 240px;
+        margin-left: 15%;
+        margin-bottom: 20px;
+    }
+    
+    #goodFeedBack
+    {
+        width: 240px;
+        margin-left: 15%;
+        margin-bottom: 50px;
+    }
+}

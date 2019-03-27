@@ -1,3 +1,6 @@
+document.getElementById('goodFeedBack').style.display='none';
+document.getElementById('badFeedBack').style.display='none';
+
 document.getElementById('employer_login_form').addEventListener('submit', validateForm)
 
 function validateForm(l)
@@ -9,7 +12,14 @@ function validateForm(l)
 
     if(username==null||username=='' && password==null||password=='')
     {
-        document.getElementById('login').innerHTML='Make sure you filled all Fields';
+        $(function()
+        {
+            
+            $('#badFeedBack').show(500);
+        }
+        )
+
+        document.getElementById('badFeedBack').innerHTML='Make sure you filled all Fields';
         return false;
     }
 
@@ -18,11 +28,11 @@ function validateForm(l)
         $(function()
         {
             
-            $('#login').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('login').innerHTML='Username should have between 5 to 15 characters';
+        document.getElementById('badFeedBack').innerHTML='Username should have between 5 to 15 characters';
         return false;
     }
 
@@ -32,11 +42,11 @@ function validateForm(l)
         $(function()
         {
             
-            $('#login').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('login').innerHTML='Username should have between 5 to 15 characters';
+        document.getElementById('badFeedBack').innerHTML='Username should have between 5 to 15 characters';
         return false;
     }
 
@@ -60,16 +70,30 @@ function validateForm(l)
             .then((data)=> {
                 if(data.Message=='You have successfully Logged In')
                 {
+                    document.getElementById('badFeedBack').style.display='none';
+                    $(function()
+                    {
+            
+                        $('#goodFeedBack').show(500);
+                    }
+                    )
+                            
                     sessionStorage.setItem('employer_username', username)
-                    document.getElementById('login').innerHTML='You have successfully Logged In';
+                    document.getElementById('goodFeedBack').innerHTML='You have successfully Logged In';
                 }
 
                 else
                 {
                     $(function()
                         {
-                            $('#login').show(500);
-                            document.getElementById('login').innerHTML='Invalid Password or Username';
+                            $(function()
+                            {
+                    
+                                $('#badFeedBack').show(500);
+                            }
+                            )
+                            
+                            document.getElementById('badFeedBack').innerHTML='Invalid Password or Username';
                         }
                     )
                 }

@@ -1,3 +1,6 @@
+document.getElementById('goodFeedBack').style.display='none';
+document.getElementById('badFeedBack').style.display='none';
+
 document.getElementById('employee_sign_up').addEventListener('submit', validate_Employee_Form)
 
 function validate_Employee_Form(e)
@@ -20,10 +23,10 @@ function validate_Employee_Form(e)
         $(function()
             {
                
-                $('#feedBack').show(500);
+                $('#badFeedBack').show(500);
             }
         )
-        document.getElementById('feedBack').innerHTML='Make sure you filled all Fields';
+        document.getElementById('badFeedBack').innerHTML='Make sure you filled all Fields';
     }
 
     if(regex.test(name)==true)
@@ -31,11 +34,11 @@ function validate_Employee_Form(e)
         $(function()
         {
            
-            $('#feedBack').show(500);
+            $('#badFeedBack').show(500);
         }
      )
 
-        document.getElementById('feedBack').innerHTML='Name Cannot Be Numeric';
+        document.getElementById('badFeedBack').innerHTML='Name Cannot Be Numeric';
         return false;
     
     }
@@ -49,7 +52,7 @@ function validate_Employee_Form(e)
         }
         )
 
-        document.getElementById('feedBack').innerHTML='Work Cannot Be Numeric';
+        document.getElementById('badFeedBack').innerHTML='Work Cannot Be Numeric';
         return false;
 
     }
@@ -60,11 +63,11 @@ function validate_Employee_Form(e)
         $(function()
         {
             
-            $('#feedBack').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('feedBack').innerHTML='Other Skills Cannot Be Numeric';
+        document.getElementById('badFeedBack').innerHTML='Other Skills Cannot Be Numeric';
         return false;
 
     }
@@ -74,11 +77,11 @@ function validate_Employee_Form(e)
         $(function()
         {
             
-            $('#feedBack').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('feedBack').innerHTML='Username should have between 5 to 15 characters';
+        document.getElementById('badFeedBack').innerHTML='Username should have between 5 to 15 characters';
         return false;
     }
 
@@ -87,11 +90,11 @@ function validate_Employee_Form(e)
         $(function()
         {
             
-            $('#feedBack').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('feedBack').innerHTML='Country Cannot Be Numeric';
+        document.getElementById('badFeedBack').innerHTML='Country Cannot Be Numeric';
         return false;
 
     }
@@ -101,11 +104,11 @@ function validate_Employee_Form(e)
         $(function()
         {
             
-            $('#feedBack').show(500);
+            $('#badFeedBack').show(500);
         }
         )
 
-        document.getElementById('feedBack').innerHTML='Main Expertise Cannot Be Numeric';
+        document.getElementById('badFeedBack').innerHTML='Main Expertise Cannot Be Numeric';
         return false;
     }
 
@@ -148,12 +151,12 @@ function validate_Employee_Form(e)
                     localStorage.setItem('dbSkill', main_stack)
 
 
-                    document.getElementById('feedBack').style.display='none';
+                    document.getElementById('badFeedBack').style.display='none';
                     $(function()
                     {
     
-                        $('#feedBack').show(500);
-                        document.getElementById('feedBack').innerHTML='Successfully Signed Up'
+                        $('#goodFeedBack').show(500);
+                        document.getElementById('goodFeedBack').innerHTML='Successfully Signed Up'
                     }
                     )
                 }

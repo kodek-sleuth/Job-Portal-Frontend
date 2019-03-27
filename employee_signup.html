@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Acme|Shadows+Into+Light|Lobster|Noto+Serif|Pacifico|Roboto|StaatlichesCoiny|Hind|Mukta|Poppins|Rubik|Bree+Serif|Slabo+27px|Bitter|Merriweather" rel="stylesheet">
-    <link href="css/signup.css" rel="stylesheet">
+    <link href="css/employer_signup.css" rel="stylesheet">
 </head>
 <body>
     <div class="main">
@@ -23,25 +23,29 @@
             <div id="badFeedBack"></div>
             <div id="goodFeedBack"></div>
 
-            <form method="POST" id="employer_sign_up" class="form">
+            <form method="POST" id="employee_sign_up" class="form">
                 <div class="form_divs">
-                    <input type="text" id="name_emp" placeholder="Name*" class="formcontrol"><br>
-                    <input type="text" id="username_emp" placeholder="Username" class="formcontrol"><br>
+                        <input type="text" id="name"  placeholder="Name" class="formcontrol">
+                        <input type="text" id="username"  placeholder="Username" class="formcontrol"><br>
                 </div>
                 
                 <div class="form_divs">
-                    <input type="email" id="email_emp" placeholder="Email*" class="formcontrol"><br>
-                    <input type="password" id="password_emp" placeholder="Password*" class="formcontrol"><br>
+                        <input type="email" id="email"  placeholder="Email" class="formcontrol"><br>
+                        <input type="password" id="password" placeholder="Password" class="formcontrol"><br>
                 </div>
 
                 <div class="form_divs">
-                    <input type="text" id="country_emp" placeholder="Country*" class="formcontrol"><br>
-                    <input type="text" id="company_emp" placeholder="Company*" class="formcontrol"><br>
+                        <input type="text" id="country"  placeholder="Country" class="formcontrol"><br>
+                        <input type="text" id="main_stack" name="Main_Stack" placeholder="Programming Language" class="formcontrol"><br>
                 </div>
-
-                <textarea id="dev_bio_emp" class="formcontrol_textarea" placeholder="This is where you enter your biography"></textarea><br>
-                <input type="submit" class="button" value="Register!">
-            
+                
+                <div class="form_divs">
+                    <input type="text" id="other_stacks" name="Other_Stack" placeholder="Other Skills" class="formcontrol"><br>
+                    <input type="text" id="work_status" name="Work_status" placeholder="Job Status" class="formcontrol"><br>
+                </div>
+                
+                <textarea id="dev_bio" class="formcontrol_textarea" placeholder="Your Programming Biography"></textarea><br>
+                <input type="submit" class="button"  value="Submit">
             </form>
             <h4 class="credits">Kodek Productions INC. All Rights Reserved</h4>
             
@@ -60,12 +64,12 @@
                 </svg>
             </div>
 
-            <h1 class="gh_text">Get Skilled Programmers Fast</h1>
+            <h1 class="gh_text">Get Your First Programming Job here</h1>
         </div>
     
     </div>
 
     <script src="js/jquery.js"></script>
-    <script src="js/sign_up_employer.js"></script>
+    <script src="js/sign_up_employee.js"></script>
 </body>
 </html>
