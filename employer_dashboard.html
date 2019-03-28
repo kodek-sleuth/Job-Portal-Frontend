@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Acme|Shadows+Into+Light|Lobster|Noto+Serif|Pacifico|Roboto|StaatlichesCoiny|Hind|Mukta|Poppins|Rubik|Bree+Serif|Slabo+27px|Bitter|Merriweather" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="navbar_menu_icon">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/>
+            </svg>
+        </div>
+
+        <div class="name_of_user">
+            <h4 id="employee_name">Mugerwa Joseph</h4>
+        </div>
+
+        <div class="profile_div">
+            <img src="Icons/man.svg" class="profile_icon_svg">
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="welcome_dashboard">
+            <h2 id="welcome_user">Welcome back to your dashboard Joseph</h2>
+            <div class="message">
+                <div class="tags">
+                    <img src="Icons/chat.svg" class="tags_message">
+                    <div>View Inbox</div>
+                </div>
+                <div class="tags">
+                    <a href="/employer_post_form.html"><img src="Icons/job_post.svg" class="tags_message"></a>
+                    <div>Post Job</div>
+                </div>
+            </div>
+
+            <h3>Search By Stacks In our Database</h3>
+            <div class="skills_on_platform">
+                <div class="skils_divs_first">
+                    <img src="Icons/hashtag.svg" class="skills_icons">
+                    <p class="skilss_text">C#</p>
+                </div>
+            
+                <div class="skils_divs_first">
+                    <img src="Icons/python.svg" class="skills_icons">
+                    <p class="skilss_text">Python</p>
+                </div>
+            
+    
+                <div class="skils_divs_first">
+                    <img src="Icons/java.svg" class="skills_icons">
+                    <p class="skilss_text">Java</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="information_dashboard">
+            
+            <button class="logout">Logout</button>
+
+            <div class="lister">
+                <ul class="list_tags">
+                    <a href="/employer_dashboard.html"><li class="li" id="first">Employees</li></a>
+                    <a href="/employer_jobs_posted.html"><li class="li" id="second">Jobs Posted</li></a>
+                    <a href="/employer_interviewing.html"><li class="li" id="third">Interviewing</li></a>
+                    <li class="li" id="fourth">Profile</li>
+                </ul>
+            </div>
+            
+            <div id="get_employees">
+                <div id="demo" class="card">
+                    <h2 id="name">Name: </h2>
+                    <h2 id="expertise">Expertise: </h2>
+                    <h2 id="username">Username: </h2>
+                    <h2 id="work_status">Work Status: </h2>
+                    <button class="message"">Message: </button>
+                </div>
+            </div>
+
+            
+
+            
+
+        </div>
+
+    </div>
+    
+
+    <script src="js/jquery.js"></script>
+    <script src="js/employer_dashboard.js"></script>
+</body>
+</html>

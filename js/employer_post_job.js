@@ -1,3 +1,7 @@
+document.getElementById('goodFeedBack').style.display='none';
+document.getElementById('badFeedBack').style.display='none';
+
+
 document.getElementById('employer_post_job').addEventListener('submit', validate_Job_Form)
 const db_username_emp = sessionStorage.getItem('Username_from_Employer')
 
@@ -19,10 +23,10 @@ function validate_Job_Form(f)
         $(function()
             {
                
-                $('#feedBack').show(500);
+                $('#badFeedBack').show(500);
             }
         )
-        document.getElementById('feedBack').innerHTML='Make sure you filled all Fields';
+        document.getElementById('badFeedBack').innerHTML='Make sure you filled all Fields';
     }
    
     else
@@ -48,12 +52,12 @@ function validate_Job_Form(f)
             .then((data)=> {
                 if(data.Message== "You have successfully Posted Job")
                 {
-                    document.getElementById('feedBack').style.display='none';
+                    document.getElementById('badFeedBack').style.display='none';
                     $(function()
                     {
     
-                        $('#feedBack').show(500);
-                        document.getElementById('feedBack').innerHTML='You have successfully Posted Job'
+                        $('#goodFeedBack').show(500);
+                        document.getElementById('goodFeedBack').innerHTML='You have successfully Posted Job'
                     }
                     )
                 }

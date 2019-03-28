@@ -59,7 +59,7 @@ function validate_Employer_Form(f)
         const message_text = document.getElementById('message_text').value;
         const subject = document.getElementById('subject').value;
     
-        fetch('http://127.0.0.1:3000/employer/inbox',{
+        fetch('http://127.0.0.1:3000/employee/inbox',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',
@@ -71,7 +71,7 @@ function validate_Employer_Form(f)
             })
             .then((response)=> response.json())
             .then((data)=> {
-                if(data.Message=="Successfully Sent Message To "+the_username)
+                if(data.Message== "Successfully Sent Message To "+the_username)
                 {
                     document.getElementById('badFeedBack').style.display='none';
                     $(function()
