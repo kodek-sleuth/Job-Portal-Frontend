@@ -108,17 +108,7 @@ function validate_Employer_Form(f)
             .then((response)=> response.json())
             .then((data)=> {
                 if(data.Message=='You have successfully Created an Employer account')
-                {
-    
-                    localStorage.setItem('dbNameEmp', name_emp)
-                    localStorage.setItem('dbUsernameEmp', username_emp)
-                    localStorage.setItem('dbPassword', password_emp)
-                    localStorage.setItem('dbCompanyEmp', company_emp)
-                    localStorage.setItem('dbCountryEmp', country_emp)
-                    localStorage.setItem('dbEmail', email_emp)
-                    localStorage.setItem('dbDevBioEmp', dev_bio_emp)
-
-                    
+                {                    
                     document.getElementById('badFeedBack').style.display='none';
                     $(function()
                     {
@@ -127,6 +117,8 @@ function validate_Employer_Form(f)
                         document.getElementById('goodFeedBack').innerHTML='Successfully Signed Up'
                     }
                     )
+
+                    window.location="/employer_login.html"
                 }
             })
            

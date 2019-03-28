@@ -80,6 +80,7 @@ function validateForm(l)
                             
                     sessionStorage.setItem('employer_username', username)
                     document.getElementById('goodFeedBack').innerHTML='You have successfully Logged In';
+                    window.location="/employer_dashboard.html"
                 }
 
                 else

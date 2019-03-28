@@ -1,3 +1,7 @@
+const username = sessionStorage.getItem('')
+
+
+
 function get_jobs_applied()
 {
     let output='';

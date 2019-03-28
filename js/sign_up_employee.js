@@ -154,11 +154,13 @@ function validate_Employee_Form(e)
                     document.getElementById('badFeedBack').style.display='none';
                     $(function()
                     {
-    
+                        
                         $('#goodFeedBack').show(500);
                         document.getElementById('goodFeedBack').innerHTML='Successfully Signed Up'
                     }
                     )
+
+                    window.location='/employee_login.html';
                 }
             })
            

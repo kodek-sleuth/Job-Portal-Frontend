@@ -1,8 +1,56 @@
+const username = sessionStorage.getItem('employer_username')
+
+if(username==''||username==null)
+{
+    window.location="/employer_login.html"
+}
+
+document.getElementsByClassName('logout')[0].addEventListener('click', logout)
+function logout()
+{
+    window.location='/employer_login.html'
+}
+
+
+function change_names()
+{
+    document.getElementById('welcome_user').innerHTML='Welcome back to your Dashboard '+username;
+
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/employers',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+            if(emp.Username==username)
+            {
+                const employer_name=emp.Name
+                const employer_username=emp.Username
+                const employer_bio=emp.Biography
+                const employer_member_since=emp.Member_Since
+                const employer_password=emp.Password
+                const employer_country=emp.Country
+                const employer_company=emp.employer_company
+
+                output+=`<h4>${emp.Name}</h4>`;
+            }
+        })
+        document.getElementsByClassName('name_of_user')[0].innerHTML=output;
+    });
+
+}
+
+change_names()
+
+
+
 function get_messages_from_employee()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employer/inbox/bonnie/received',{
+    fetch('http://127.0.0.1:3000/employer/inbox/'+username+'/received',{
         method: 'GET'
     })
     .then((res)=>res.json())
@@ -30,7 +78,7 @@ function get_messages_sent_to_employee()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employer/inbox/bonnie/sent',{
+    fetch('http://127.0.0.1:3000/employer/inbox/'+username+'/sent',{
         method: 'GET'
     })
     .then((res)=>res.json())

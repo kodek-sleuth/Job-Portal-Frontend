@@ -36,27 +36,13 @@ function validateForm(l)
         return false;
     }
 
-
-    if(username.length>10)
-    {
-        $(function()
-        {
-            
-            $('#badFeedBack').show(500);
-        }
-        )
-
-        document.getElementById('badFeedBack').innerHTML='Username should have between 5 to 15 characters';
-        return false;
-    }
-
     else
     {
         
         let username = document.getElementById('username_employee_login').value;
         let password = document.getElementById('password_employee_login').value;
         
-        fetch('http://127.0.0.1:3000/employer/login',{
+        fetch('http://127.0.0.1:3000/employee/login',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',
@@ -80,6 +66,7 @@ function validateForm(l)
                             
                     sessionStorage.setItem('employee_username', username)
                     document.getElementById('goodFeedBack').innerHTML='You have successfully Logged In';
+                    window.location="/employee_dasboard.html"
                 }
 
                 else
