@@ -3,6 +3,8 @@ document.getElementById('badFeedBack').style.display='none';
 
 const username = sessionStorage.getItem('employee_username')
 
+document.getElementById('employer_login_form').addEventListener('click', validate_Employer_Form)
+
 function validate_Employer_Form(f)
 {
     f.preventDefault()
@@ -43,7 +45,7 @@ function validate_Employer_Form(f)
                     document.getElementById('badFeedBack').style.display='none';
                     $(function()
                     {
-    
+                        window.location="/employee_dashboard.html"
                         $('#goodFeedBack').show(500);
                         document.getElementById('goodFeedBack').innerHTML="You Have Successfully Applied For This Job"
                     }
