@@ -76,11 +76,13 @@ function validate_Employer_Form(f)
                     document.getElementById('badFeedBack').style.display='none';
                     $(function()
                     {
-    
+                        
                         $('#goodFeedBack').show(500);
                         document.getElementById('goodFeedBack').innerHTML='Successfully Sent Message To '+the_username
                     }
                     )
+
+                    window.location="/employee_dashboard.html"
                 }
             })
            
