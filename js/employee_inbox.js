@@ -44,7 +44,7 @@ function get_messages_sent_to_employer()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employee/inbox/'+username+'/sent',{
+    fetch('https://job-portal-online.herokuapp.com/employee/inbox/'+username+'/sent',{
         method: 'GET'
     })
     .then((res)=>res.json())

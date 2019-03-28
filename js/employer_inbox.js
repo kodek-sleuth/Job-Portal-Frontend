@@ -50,7 +50,7 @@ function get_messages_from_employee()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employer/inbox/'+username+'/received',{
+    fetch('https://job-portal-online.herokuapp.com/employer/inbox/'+username+'/received',{
         method: 'GET'
     })
     .then((res)=>res.json())
@@ -78,7 +78,7 @@ function get_messages_sent_to_employee()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employer/inbox/'+username+'/sent',{
+    fetch('https://job-portal-online.herokuapp.com/employer/inbox/'+username+'/sent',{
         method: 'GET'
     })
     .then((res)=>res.json())
