@@ -10,12 +10,15 @@ function get_messages_from_employee()
         data.forEach(mes =>{
         
            output+=`<div id="demo_3">
-           <h3 id="from">${mes.From}</h3>
-           <h3 id="date">${mes.Date_Posted}</h3>
-           <h3 id="subject">${mes.Subject}</h3>
-           <h3 id="description">${mes.Description}</h3>
-           <button>Reply</button>
-       </div>`;
+           <div id="demo_3" class="card">
+           <div class="card_type">
+               <h3 id="subject">Subject: ${mes.Subject}</h3>
+               <h4 class="job_date">${mes.Date_Posted}</h4>
+           </div>
+          <h3 id="description">Des: ${mes.Description}</h3>
+          <h3 id="from">From: ${mes.From}</h3>
+          <a href="/messaging.html"><button class="message_btn">Reply</button></a>
+      </div>`;
         })
         document.getElementById('get_messages_from_employee').innerHTML=output;
     });
@@ -34,11 +37,13 @@ function get_messages_sent_to_employee()
     .then((data)=>{
         data.forEach(mes =>{
         
-           output+=`<div id="demo_3">
-           <h3 id="from">${mes.To}</h3>
-           <h3 id="date">${mes.Date_Posted}</h3>
-           <h3 id="subject">${mes.Subject}</h3>
-           <h3 id="description">${mes.Description}</h3>
+           output+=`<div id="demo_3" class="card">
+            <div class="card_type">
+                <h3 id="subject">Subject: ${mes.Subject}</h3>
+                <h3 class="job_date">${mes.Date_Posted}</h3>
+            </div>
+           <h3 id="description">Des: ${mes.Description}</h3>
+           <h3 id="from">To: ${mes.To}</h3>
        </div>`;
         })
         document.getElementById('get_messages_sent_to_employee').innerHTML=output;
