@@ -1,6 +1,8 @@
 document.getElementById('goodFeedBack').style.display='none';
 document.getElementById('badFeedBack').style.display='none';
 
+const username = sessionStorage.getItem('employee_username')
+
 function validate_Employer_Form(f)
 {
     f.preventDefault()
@@ -46,6 +48,8 @@ function validate_Employer_Form(f)
                         document.getElementById('goodFeedBack').innerHTML="You Have Successfully Applied For This Job"
                     }
                     )
+
+                    window.location="/employee_dashboard.html"
                 }
             })
            

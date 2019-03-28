@@ -3,7 +3,7 @@ document.getElementById('badFeedBack').style.display='none';
 
 
 document.getElementById('employer_post_job').addEventListener('submit', validate_Job_Form)
-const db_username_emp = sessionStorage.getItem('Username_from_Employer')
+const username = sessionStorage.getItem('employer_username')
 
 
 function validate_Job_Form(f)
@@ -38,7 +38,7 @@ function validate_Job_Form(f)
         const job_other_stacks = document.getElementById('job_other_stacks').value;
         const job_type = document.getElementById('job_type').value;
     
-        fetch('http://127.0.0.1:3000/employer/'+db_username_emp+'/post',{
+        fetch('http://127.0.0.1:3000/employer/'+username+'/post',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',
@@ -55,7 +55,7 @@ function validate_Job_Form(f)
                     document.getElementById('badFeedBack').style.display='none';
                     $(function()
                     {
-    
+                        window.location="/employer_dashboard.html"
                         $('#goodFeedBack').show(500);
                         document.getElementById('goodFeedBack').innerHTML='You have successfully Posted Job'
                     }
@@ -73,5 +73,5 @@ document.getElementsByClassName('menu_icon_size')[0].addEventListener('click', r
 
 function revert()
 {
-    window.location='/index.html'
+    window.location='/employer_dashboard.html'
 }

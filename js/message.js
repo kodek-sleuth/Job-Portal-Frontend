@@ -81,6 +81,8 @@ function validate_Employer_Form(f)
                         document.getElementById('goodFeedBack').innerHTML='Successfully Sent Message To '+the_username
                     }
                     )
+
+                    window.location="/employer_dashboard.html"
                 }
             })
            
