@@ -66,7 +66,7 @@ function validateForm(l)
                             
                     sessionStorage.setItem('employee_username', username)
                     document.getElementById('goodFeedBack').innerHTML='You have successfully Logged In';
-                    window.location="/employee_dasboard.html"
+                    window.location="/employee_dashboard.html"
                 }
 
                 else
@@ -88,4 +88,12 @@ function validateForm(l)
            
             return true
     }
+}
+
+
+document.getElementsByClassName('menu_icon_size')[0].addEventListener('click', revert)
+
+function revert()
+{
+    window.location='/index.html'
 }

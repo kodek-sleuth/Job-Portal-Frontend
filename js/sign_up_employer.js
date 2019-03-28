@@ -126,3 +126,10 @@ function validate_Employer_Form(f)
     }
 
 }
+
+document.getElementsByClassName('menu_icon_size')[0].addEventListener('click', revert)
+
+function revert()
+{
+    window.location='/index.html'
+}

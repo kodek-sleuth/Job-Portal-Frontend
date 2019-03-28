@@ -17,7 +17,7 @@
         </div>
 
         <div class="name_of_user">
-            <h4 id="employer_name">Mugerwa Joseph</h4>
+            <h4 id="employee_name">Mugerwa Joseph</h4>
         </div>
 
         <div class="profile_div">
@@ -30,11 +30,11 @@
             <h2 id="welcome_user">Welcome back to your dashboard Joseph</h2>
             <div class="message">
                 <div class="tags">
-                    <a href="/employer_inbox.html"><img src="Icons/chat.svg" class="tags_message"></a>
+                    <a href="/employee_inbox.html"><img src="Icons/chat.svg" class="tags_message"></a>
                     <div>View Inbox</div>
                 </div>
                 <div class="tags">
-                    <a href="/employer_post_form.html"><img src="Icons/job_post.svg" class="tags_message"></a>
+                    <a href="/employee_post_form.html"><img src="Icons/job_post.svg" class="tags_message"></a>
                     <div>Post Job</div>
                 </div>
             </div>
@@ -65,25 +65,28 @@
 
             <div class="lister">
                 <ul class="list_tags">
-                    <a href="/employer_dashboard.html"><li class="li" id="first">Dashboard</li></a>
-                    <a href="/employer_profile.html"><li class="li" id="fourth" style="color: #ff5e62; text-decoration: underline">Profile</li></a>
+                    <a href="/employee_dashboard.html"><li class="li" style="color: #17a2b8">Dasboard</li></a>
+                    <a href="/employee_inbox.html"><li class="li" style="color: #17a2b8">Inbox</li></a>
+                    <a href="/employee_outbox.html"><li class="li" style="color: #17a2b8">Outbox</li></a>
                 </ul>
             </div>
             
-        <div id="get_employer_profile">
-                <div id="demo" class="card">
-                    <h3 id="name">Name: </h3>
-                    <h3 id="expertise">Expertise: </h3>
-                    <h3 id="username">Username: </h3>
-                    <h3 id="work_status">Work Status: </h3>
-                    <h3 id="company">Company: </h3>
-                    <h3 id="biography">Bio: </h3>
+            <div id="get_messages_from_employer">
+                <div id="demo_3" class="card">
+                    <div class="card-type">
+                        <h3 id="subject">Title</h3>
+                        <h3 id="date">Date</h3>
+                    </div>
+                    <h3 id="description">Type</h3>
+                    <h3 id="from">Stack</h3>
                 </div>
             </div>
         </div>
 
     </div>
+    
+
     <script src="js/jquery.js"></script>
-    <script src="js/employer_dashboard.js"></script>
+    <script src="js/employee_inbox.js"></script>
 </body>
 </html>
