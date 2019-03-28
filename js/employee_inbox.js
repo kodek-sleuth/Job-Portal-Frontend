@@ -31,7 +31,7 @@ function get_messages_from_employer()
             </div>
            <h3 id="description">Des: ${mes.Description}</h3>
            <h3 id="from">From: ${mes.From}</h3>
-           <a href="/message_employer.html"><button class="message_btn">Reply</button></a>
+           <a href="/message_employee.html"><button class="message_btn">Reply</button></a>
        </div>`;
         })
         document.getElementById('get_messages_from_employer').innerHTML=output;

@@ -57,7 +57,7 @@ function get_messages_from_employee()
     .then((data)=>{
         data.forEach(mes =>{
         
-           output+=`<div id="demo_3">
+           output+=`
            <div id="demo_3" class="card">
            <div class="card_type">
                <h3 id="subject">Subject: ${mes.Subject}</h3>
