@@ -9,7 +9,7 @@ document.getElementsByClassName('logout')[0].addEventListener('click', logout)
 function logout()
 {
     sessionStorage.removeItem('employer_username')
-    window.location='/employer_login.html'
+    window.location='/index.html'
 }
 
 

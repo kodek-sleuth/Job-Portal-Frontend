@@ -2,7 +2,7 @@ const username = sessionStorage.getItem('employee_username')
 
 if(username==''||username==null)
 {
-    window.location="/employee_login.html"
+    window.location="/index.html"
 }
 
 document.getElementsByClassName('logout')[0].addEventListener('click', logout)
