@@ -26,7 +26,7 @@ function validate_Employer_Form(f)
 
     else
     {
-        const title = document.getElementById('title').value;
+        const title = document.getElementById('job_title').value;
 
         fetch('https://job-portal-online.herokuapp.com/employee/'+username+'/apply',{
             method:'POST',
