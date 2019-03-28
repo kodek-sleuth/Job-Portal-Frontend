@@ -20,7 +20,7 @@ function change_names()
     let output='';
     let profile=''
   
-    fetch('http://127.0.0.1:3000/employees',{
+    fetch('https://job-portal-online.herokuapp.com/employees',{
         method: 'GET'
     })
     .then((res)=>res.json())
@@ -53,7 +53,7 @@ function get_jobs_applied()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employee/pascal/applied',{
+    fetch('https://job-portal-online.herokuapp.com/employee/'+username+'/applied',{
         method: 'GET'
     })
     .then((res)=>res.json())
@@ -74,7 +74,7 @@ function get_Jobs()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/jobs',{
+    fetch('https://job-portal-online.herokuapp.com/jobs',{
         method: 'GET'
     })
     .then((res)=>res.json())
@@ -100,7 +100,7 @@ function get_Employers()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employers',{
+    fetch('https://job-portal-online.herokuapp.com/employers',{
         method: 'GET'
     })
     .then((res)=>res.json())

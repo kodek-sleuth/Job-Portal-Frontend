@@ -125,7 +125,7 @@ function validate_Employee_Form(e)
         const work_status = document.getElementById('work_status').value;
         const dev_bio = document.getElementById('dev_bio').value;
     
-        fetch('http://127.0.0.1:3000/employee/signup',{
+        fetch('https://job-portal-online.herokuapp.com/employee/signup',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',

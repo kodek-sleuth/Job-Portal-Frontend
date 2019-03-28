@@ -95,7 +95,7 @@ function validate_Employer_Form(f)
     const dev_bio_emp = document.getElementById('dev_bio_emp').value;
 
     
-        fetch('http://127.0.0.1:3000/employer/signup',{
+        fetch('https://job-portal-online.herokuapp.com/employer/signup',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',

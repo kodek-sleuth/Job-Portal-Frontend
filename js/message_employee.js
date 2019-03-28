@@ -59,7 +59,7 @@ function validate_Employer_Form(f)
         const message_text = document.getElementById('message_text').value;
         const subject = document.getElementById('subject').value;
     
-        fetch('http://127.0.0.1:3000/employee/inbox',{
+        fetch('https://job-portal-online.herokuapp.com/employee/inbox',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',

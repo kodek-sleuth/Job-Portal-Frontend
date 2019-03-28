@@ -38,7 +38,7 @@ function validate_Job_Form(f)
         const job_other_stacks = document.getElementById('job_other_stacks').value;
         const job_type = document.getElementById('job_type').value;
     
-        fetch('http://127.0.0.1:3000/employer/'+username+'/post',{
+        fetch('https://job-portal-online.herokuapp.com/employer/'+username+'/post',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',

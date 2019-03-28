@@ -26,7 +26,7 @@ function validate_Employer_Form(f)
     {
         const title = document.getElementById('title').value;
 
-        fetch('http://127.0.0.1:3000/employee/'+username+'/apply',{
+        fetch('https://job-portal-online.herokuapp.com/employee/'+username+'/apply',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',

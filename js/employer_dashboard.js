@@ -52,7 +52,7 @@ function get_Employees()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employees',{
+    fetch('https://job-portal-online.herokuapp.com/employees',{
         method: 'GET'
     })
     .then((res)=>res.json())
@@ -79,7 +79,7 @@ function get_jobs()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/employee/'+username+'/posted',{
+    fetch('https://job-portal-online.herokuapp.com/employee/'+username+'/posted',{
         method: 'GET'
     })
     .then((res)=>res.json())
