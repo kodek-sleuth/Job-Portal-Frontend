@@ -49,6 +49,7 @@ function validateForm(l)
 
     else
     {
+        document.getElementsByClassName('button').value='Please wait....'
         
         let username = document.getElementById('username_employer_login').value;
         let password = document.getElementById('password_employer_login').value;
@@ -94,6 +95,8 @@ function validateForm(l)
                             document.getElementById('badFeedBack').innerHTML='Invalid Password or Username';
                         }
                     )
+
+                    document.getElementsByClassName('button').value='Submit'
                 }
             })
            

@@ -111,6 +111,7 @@ function validate_Employee_Form(e)
 
     else
     {
+        document.getElementsByClassName('button')[0].value='Please wait....'
         
         const name = document.getElementById('name').value;
         const username = document.getElementById('username').value;
@@ -158,6 +159,20 @@ function validate_Employee_Form(e)
                     )
 
                     window.location='/employee_login.html';
+                }
+
+                else
+                {
+                    $(function()
+                    {
+                        
+                        $('#badFeedBack').show(500);
+                        document.getElementById('badFeedBack').innerHTML='Invalid Credentials'
+                    }
+                    )
+                    document.getElementsByClassName('button')[0].value='Submit'
+
+
                 }
             })
            

@@ -82,14 +82,15 @@ function validate_Employer_Form(f)
 
     else
     {
-        
-    const name_emp = document.getElementById('name_emp').value;
-    const username_emp = document.getElementById('username_emp').value;
-    const email_emp = document.getElementById('email_emp').value;
-    const password_emp = document.getElementById('password_emp').value;
-    const country_emp = document.getElementById('country_emp').value;
-    const company_emp = document.getElementById('company_emp').value;
-    const dev_bio_emp = document.getElementById('dev_bio_emp').value;
+        document.getElementsByClassName('button')[0].value='Please wait....'
+    
+        const name_emp = document.getElementById('name_emp').value;
+        const username_emp = document.getElementById('username_emp').value;
+        const email_emp = document.getElementById('email_emp').value;
+        const password_emp = document.getElementById('password_emp').value;
+        const country_emp = document.getElementById('country_emp').value;
+        const company_emp = document.getElementById('company_emp').value;
+        const dev_bio_emp = document.getElementById('dev_bio_emp').value;
 
     
         fetch('https://job-portal-online.herokuapp.com/employer/signup',{
@@ -116,6 +117,19 @@ function validate_Employer_Form(f)
                     )
 
                     window.location="/employer_login.html"
+                }
+
+                else
+                {
+                    $(function()
+                    {
+    
+                        $('#badFeedBack').show(500);
+                        document.getElementById('badFeedBack').innerHTML='Invalid Credentials, Please Try Again'
+                    }
+                    )
+
+                    document.getElementsByClassName('button')[0].value='Submit'
                 }
             })
            
