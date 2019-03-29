@@ -82,7 +82,7 @@ function validate_Update_Form(e)
         const dev_bio_employer_update = document.getElementById('dev_bio_employer_update').value;
     
     
-        fetch('http://127.0.0.1:3000/employer/'+username+'/update',{
+        fetch('https://job-portal-online.herokuapp.com/employer/'+username+'/update',{
             method:'PUT',
             headers:{
                 'Accept':'application/json, text/plain, */*',

@@ -52,7 +52,7 @@ function search_employers(e)
     e.preventDefault()
     let output = ''
     var result=document.getElementById('search').value;
-    fetch('http://127.0.0.1:3000/employers',{
+    fetch('https://job-portal-online.herokuapp.com/employers',{
         method: 'GET'
         })
         .then((response)=> response.json())

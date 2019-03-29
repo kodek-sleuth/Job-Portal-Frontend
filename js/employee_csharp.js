@@ -50,7 +50,7 @@ function get_Jobs_csharp()
 {
     let output='';
   
-    fetch('http://127.0.0.1:3000/jobs',{
+    fetch('https://job-portal-online.herokuapp.com/jobs',{
         method: 'GET'
     })
     .then((res)=>res.json())
