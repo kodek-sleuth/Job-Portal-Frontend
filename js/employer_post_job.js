@@ -1,7 +1,3 @@
-document.getElementById('goodFeedBack').style.display='none';
-document.getElementById('badFeedBack').style.display='none';
-
-
 document.getElementById('employer_post_job').addEventListener('submit', validate_Job_Form)
 const username = sessionStorage.getItem('employer_username')
 

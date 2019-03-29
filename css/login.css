@@ -190,6 +190,7 @@ body
     cursor: pointer;
     margin-left: 150px;
     margin-bottom: 20px;
+    display: none;
 }
 
 #goodFeedBack
@@ -208,6 +209,7 @@ body
     cursor: pointer;
     margin-left: 150px;
     margin-bottom: 50px;
+    display: none;
 }
 
 @media(max-width:900px)

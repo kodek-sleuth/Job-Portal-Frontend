@@ -1,6 +1,3 @@
-document.getElementById('goodFeedBack').style.display='none';
-document.getElementById('badFeedBack').style.display='none';
-
 document.getElementById('employer_sign_up').addEventListener('submit', validate_Employer_Form)
 function validate_Employer_Form(f)
 {

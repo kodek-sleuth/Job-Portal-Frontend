@@ -1,6 +1,3 @@
-document.getElementById('goodFeedBack').style.display='none';
-document.getElementById('badFeedBack').style.display='none';
-
 const username = sessionStorage.getItem('employee_username')
 
 document.getElementById('employer_login_form').addEventListener('click', validate_Employer_Form)

@@ -1,8 +1,4 @@
 document.getElementById('employee_update').addEventListener('submit', validate_Update_Form)
-document.getElementById('goodFeedBack').style.display='none';
-document.getElementById('badFeedBack').style.display='none';
-
-
 
 document.getElementById('name_employee_update').value=sessionStorage.getItem('employee_upd_name');
 document.getElementById('username_employee_update').value=sessionStorage.getItem('employee_upd_username');
