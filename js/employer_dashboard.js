@@ -139,5 +139,37 @@ function time_for_message()
     window.location='/messaging.html'
 }
 
+function get_Employees_csharp()
+{
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/employees',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+           if(emp.Expertise=='Java')
+           {
+                output+=`
+                <div id="demo" class="card">
+                    <h4 id="name">Name: ${emp.Name}</h4>
+                    <h4 id="expertise">Expertise: ${emp.Expertise}</h4>
+                    <h4 id="username">Username: ${emp.Username}</h4>
+                    <h4 id="work_status">Work Status: ${emp.Status}</h4>
+                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
+                </div>`;
+                document.getElementById('get_employees_csharp').innerHTML=output;
+           }
+           
+        })
+        
+    });
+}
+get_Employees_csharp()
+
+
+
+
 
 
