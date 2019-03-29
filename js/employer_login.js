@@ -23,7 +23,7 @@ function validateForm(l)
         return false;
     }
 
-    if(username.length<4)
+    if(username.length<3)
     {
         $(function()
         {
@@ -37,7 +37,7 @@ function validateForm(l)
     }
 
 
-    if(username.length>10)
+    if(username.length>20)
     {
         $(function()
         {
