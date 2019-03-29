@@ -60,11 +60,11 @@ function get_messages_from_employee()
            output+=`
            <div id="demo_3" class="card">
            <div class="card_type">
-               <h3 id="subject">Subject: ${mes.Subject}</h3>
+               <h4 id="subject">Subject: ${mes.Subject}</h4>
                <h4 class="job_date">${mes.Date_Posted}</h4>
            </div>
-          <h3 id="description">Des: ${mes.Description}</h3>
-          <h3 id="from">From: ${mes.From}</h3>
+          <h4 id="description">Des: ${mes.Description}</h4>
+          <h4 id="from">From: ${mes.From}</h4>
           <a href="/messaging.html"><button class="message_btn">Reply</button></a>
       </div>`;
         })
@@ -87,11 +87,11 @@ function get_messages_sent_to_employee()
         
            output+=`<div id="demo_3" class="card">
             <div class="card_type">
-                <h3 id="subject">Subject: ${mes.Subject}</h3>
-                <h3 class="job_date">${mes.Date_Posted}</h3>
+                <h4 id="subject">Subject: ${mes.Subject}</h4>
+                <h4 class="job_date">${mes.Date_Posted}</h4>
             </div>
-           <h3 id="description">Des: ${mes.Description}</h3>
-           <h3 id="from">To: ${mes.To}</h3>
+           <h4 id="description">Des: ${mes.Description}</h4>
+           <h4 id="from">To: ${mes.To}</h4>
        </div>`;
         })
         document.getElementById('get_messages_sent_to_employee').innerHTML=output;
@@ -99,3 +99,9 @@ function get_messages_sent_to_employee()
 }
 
 get_messages_sent_to_employee()
+
+document.getElementsByClassName('nav_message')[0].addEventListener('click', change_to_message)
+function change_to_message()
+{
+    window.location='/messaging.html'
+}

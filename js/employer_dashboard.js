@@ -12,6 +12,11 @@ function logout()
     window.location='/index.html'
 }
 
+document.getElementsByClassName('nav_message')[0].addEventListener('click', change_to_message)
+function change_to_message()
+{
+    window.location='/messaging.html'
+}
 
 function change_names()
 {
@@ -29,12 +34,12 @@ function change_names()
             if(emp.Username==username)
             {
                 profile+=`<div id="demo" class="card">
-                <h3 id="name">Name: ${emp.Name} </h3>
-                <h3 id="expertise">Username: ${emp.Username} </h3>
-                <h3 id="username">Company: ${emp.Company}</h3>
-                <h3 id="work_status">Country: ${emp.Country} </h3>
-                <h3 id="company">Biography: ${emp.Biography}</h3>
-                <h3 id="biography">Member Since: ${emp.Member_Since}</h3>
+                <h4 id="name">Name: ${emp.Name} </h4>
+                <h4 id="expertise">Username: ${emp.Username} </h>
+                <h4 id="username">Company: ${emp.Company}</h4>
+                <h4 id="work_status">Country: ${emp.Country} </h4>
+                <h4 id="company">Biography: ${emp.Biography}</h4>
+                <h4 id="biography">Member Since: ${emp.Member_Since}</h4>
             </div>`
 
                 output+=`<h4>${emp.Name}</h4>`;
@@ -99,5 +104,40 @@ function get_jobs()
     });
 }
 get_jobs()
+
+document.getElementById('search_employee').addEventListener('submit', search_employees)
+function search_employees(e)
+{
+    e.preventDefault()
+    let output = ''
+    var result=document.getElementById('search').value;
+    fetch('http://127.0.0.1:3000/empoyeer/employees',{
+        method: 'POST',
+        headers:{
+            'Accept':'application/json, text/plain, */*',
+            'Content-type':'application/json'
+        },
+          
+        body:JSON.stringify({"Username":result})
+        })
+        .then((response)=> response.json())
+        .then((data)=>{ 
+
+            document.getElementById('name').innerHTML='Name: ' +data.Name;  
+            document.getElementById('expertise').innerHTML='Expertise: ' +data.Expertise;
+            document.getElementById('username').innerHTML='Username: ' +data.Username;
+            document.getElementById('status').innerHTML='Work Status: ' +data.Status;
+        });   
+        
+        
+}
+
+document.getElementById('to_messaging').addEventListener('click', time_for_message)
+
+function time_for_message()
+{
+    window.location='/messaging.html'
+}
+
 
 

@@ -8,6 +8,62 @@ body
     font-family: 'Ubuntu', sans-serif;
 }
 
+#search_employee
+{
+    margin-top: 6em;
+    margin-left: 100px;
+    margin-bottom: 1em;
+}
+
+#search
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    color: rgb(27, 27, 27);
+    background: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 16px;
+    width: 350px;
+    font-family: 'Bitter', serif;
+}
+
+#search_btn
+{
+    border: 2px solid rgb(24, 32, 53);
+    cursor: pointer;
+    color: #f2f2f2;
+    font-family: 'Bitter', serif;
+    text-decoration: none;
+    background: rgb(24, 32, 53);
+    line-height: 20px;
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+#get_employees_search
+{
+    margin-bottom: 250px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #FBD786;
+    text-decoration: underline;
+}
+
+li
+{
+    color: #fff;
+}
+
 .navbar
 {
     width: 100%;
@@ -59,7 +115,7 @@ body
     width: 450px;
     padding: 10px;
     background: rgb(236, 235, 235);
-    margin-left: 120px;
+    margin-left: 100px;
     margin-bottom: 20px;
     background: #fff;
     box-shadow: rgba(57, 73, 76, 0.4) 0px 2px 10px 1px, rgba(57, 73, 76, 0.25) 0px 1px 2px;
@@ -99,10 +155,32 @@ body
     text-align: center;
 }
 
-#first
+.nav_btns
 {
-    color: #17a2b8;
-    text-decoration: underline;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_message
+{
+    border: 2px solid #2EC8B3;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+    padding: 5px 38px;
+    text-decoration: none;
+    background: #2EC8B3;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 50%;
+}
+
+.nav_message:hover
+{
+    background: #C2649A;
+    border: 2px solid #C2649A;
 }
 
 .logout
@@ -118,7 +196,7 @@ body
     background: #ff5e62;
     cursor: pointer;
     margin-top: 20px;
-    margin-left: 80%;
+    margin-left: 5%;
 }
 
 
@@ -149,6 +227,7 @@ body
     margin-left: 25px;
     cursor: pointer;
 }
+
 
 .logout:hover
 {
@@ -239,13 +318,6 @@ button:focus
 .tags
 {
     margin-left: 30px;
-    cursor: pointer;
-}
-
-a
-{
-    text-decoration: none;
-    color: rgb(27, 27, 27);
 }
 
 @media(max-width: 900px)
@@ -273,7 +345,8 @@ a
 
     .logout
     {
-        margin-left: 25%;
+        width: 100%;
+        margin-left: 0;
     }
 
     .card
@@ -296,7 +369,7 @@ a
 
     .lister
     {
-        margin: 0;
+        margin: 0px;
         text-align: start;
     }
 
@@ -304,5 +377,29 @@ a
     {
         margin-left: 2px;
     }
+
+    .nav_btns
+    {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .nav_message
+    {
+        width: 100%;
+        margin-left: 0;
+    }
     
+    #search_employee
+    {
+        margin-top: 6em;
+        margin-bottom: 1em;
+        margin-left: 10%;
+    }
+
+    #search
+    {
+        width: 200px;
+    }
 }

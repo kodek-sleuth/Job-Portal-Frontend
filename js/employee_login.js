@@ -42,7 +42,7 @@ function validateForm(l)
         let username = document.getElementById('username_employee_login').value;
         let password = document.getElementById('password_employee_login').value;
         
-        fetch('https://job-portal-online.herokuapp.com/employee/login',{
+        fetch('http://127.0.0.1:3000/employee/login',{
             method:'POST',
             headers:{
                 'Accept':'application/json, text/plain, */*',

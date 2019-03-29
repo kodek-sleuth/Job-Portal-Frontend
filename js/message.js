@@ -3,6 +3,7 @@ document.getElementById('badFeedBack').style.display='none';
 
 document.getElementById('message').addEventListener('submit', validate_Employer_Form)
 
+
 function validate_Employer_Form(f)
 {
     f.preventDefault()
@@ -96,5 +97,6 @@ document.getElementsByClassName('menu_icon_size')[0].addEventListener('click', r
 
 function revert()
 {
-    window.location='/index.html'
+    window.location='/employer_dashboard.html'
 }
+

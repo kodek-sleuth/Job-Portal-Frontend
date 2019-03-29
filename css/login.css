@@ -109,8 +109,6 @@ body
     flex-direction: row;
     border-bottom: #f2f2f2 1px solid;
     margin-bottom: 20px;
-    cursor: pointer;
-
 }
 
 .form
@@ -131,6 +129,7 @@ body
     color: #f05a28;
     font-family: 'Bitter', serif;
     margin-left: 20%;
+    cursor: pointer;
 }
 
 .signup
@@ -138,6 +137,7 @@ body
     color: #f2f2f2;
     font-family: 'Bitter', serif;
     margin-left: 20%;
+    cursor: pointer;
 }
 
 .formcontrol:focus

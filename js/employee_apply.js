@@ -65,5 +65,5 @@ document.getElementsByClassName('menu_icon_size')[0].addEventListener('click', r
 
 function revert()
 {
-    window.location='/index.html'
+    window.location='/employee_dashboard.html'
 }
