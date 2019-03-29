@@ -102,29 +102,99 @@ function get_Jobs()
 }
 get_Jobs()
 
-function get_Employers()
+function get_Jobs_csharp()
 {
     let output='';
   
-    fetch('https://job-portal-online.herokuapp.com/employers',{
+    fetch('http://127.0.0.1:3000/jobs',{
         method: 'GET'
     })
     .then((res)=>res.json())
     .then((data)=>{
         data.forEach(emp =>{
-
-           output+=`<div id="demo_10"> 
-            <h3>${emp.Name}</h3>
-            <h3>${emp.Username}</h3>
-            <h3>${emp.Date_Posted}</h3>
-            <h3>${emp.Company}</h3>
-            <h3>${emp.Country}</h3>
+           if(emp.Stack=='C#')
+           {
+                output+=`
+            <div id="demo_15" class="card">
+                <div class="card_type">
+                <h3>Title: ${emp.Job_Title}</h3>
+                <h3 class="job_date">${emp.Date_Posted}</h3>
+            </div>
+            <h3>Des: ${emp.Description}</h3>
+            <h3>Language: ${emp.Stack}</h3>
+            <a href="/employee_apply_job.html"><button id='apply' class="message_btn apply">Apply Now!</button></a>
            </div>`;
+                document.getElementById('get_jobs_csharp').innerHTML=output;
+           }
+           
         })
-        document.getElementById('get_all_employers').innerHTML=output;
+        
     });
 }
-get_Employers()
+get_Jobs_csharp()
+
+function get_Jobs_python()
+{
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/jobs',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+           if(emp.Stack=='Python')
+           {
+                output+=`
+            <div id="demo_15" class="card">
+                <div class="card_type">
+                <h3>Title: ${emp.Job_Title}</h3>
+                <h3 class="job_date">${emp.Date_Posted}</h3>
+            </div>
+            <h3>Des: ${emp.Description}</h3>
+            <h3>Language: ${emp.Stack}</h3>
+            <a href="/employee_apply_job.html"><button id='apply' class="message_btn apply">Apply Now!</button></a>
+           </div>`;
+                document.getElementById('get_jobs_python').innerHTML=output;
+           }
+           
+        })
+        
+    });
+}
+get_Jobs_python()
+
+function get_Jobs_java()
+{
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/jobs',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+           if(emp.Stack=='Java')
+           {
+                output+=`
+            <div id="demo_15" class="card">
+                <div class="card_type">
+                <h3>Title: ${emp.Job_Title}</h3>
+                <h3 class="job_date">${emp.Date_Posted}</h3>
+            </div>
+            <h3>Des: ${emp.Description}</h3>
+            <h3>Language: ${emp.Stack}</h3>
+            <a href="/employee_apply_job.html"><button id='apply' class="message_btn apply">Apply Now!</button></a>
+           </div>`;
+                document.getElementById('get_jobs_java').innerHTML=output;
+           }
+           
+        })
+        
+    });
+}
+get_Jobs_java()
+
 
 document.getElementById('search_employee').addEventListener('submit', search_employers)
 function search_employers(e)
