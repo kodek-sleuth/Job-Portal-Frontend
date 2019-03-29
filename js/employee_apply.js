@@ -67,3 +67,10 @@ function revert()
 {
     window.location='/employee_dashboard.html'
 }
+
+document.getElementsByClassName('menu_icon_size_resp')[0].addEventListener('click', return_profile)
+
+function return_profile()
+{
+    window.location="/employee_dashboard.html"
+}

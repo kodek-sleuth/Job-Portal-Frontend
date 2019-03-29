@@ -26,7 +26,7 @@ function change_names()
     let output='';
     let profile=''
   
-    fetch('https://job-portal-online.herokuapp.com/employees',{
+    fetch('http://127.0.0.1:3000/employees',{
         method: 'GET'
     })
     .then((res)=>res.json())
@@ -43,9 +43,30 @@ function change_names()
                 <h3 id="biography">Other Skills: ${emp.Other_Skills}</h3>
                 <h3 id="biography">Status: ${emp.Status}</h3>
                 <h3 id="biography">Biography: ${emp.Biography}</h3>
+                <a href="/employee_update_form.html"><button class="update_profile_btn">Update Profile</button></a>
             </div>`
 
                 output+=`<h4>${emp.Name}</h4>`;
+
+                var employee_upd_Name=emp.Name
+                var employee_upd_Username=emp.Username
+                var employee_upd_Expertise=emp.Expertise
+                var employee_upd_Country=emp.Country
+                var employee_upd_Email=emp.Email
+                var employee_upd_Password=emp.Password
+                var employee_upd_Bio=emp.Biography
+                var employee_upd_Status=emp.Status
+                var employee_upd_Other_Skills=emp.Other_Skills
+
+                sessionStorage.setItem('employee_upd_name', employee_upd_Name)
+                sessionStorage.setItem('employee_upd_username', employee_upd_Username)
+                sessionStorage.setItem('employee_upd_email', employee_upd_Email)
+                sessionStorage.setItem('employee_upd_country', employee_upd_Country)
+                sessionStorage.setItem('employee_upd_expertise', employee_upd_Expertise)
+                sessionStorage.setItem('employee_upd_bio', employee_upd_Bio)
+                sessionStorage.setItem('employee_upd_password', employee_upd_Password)
+                sessionStorage.setItem('employee_upd_status', employee_upd_Status)
+                sessionStorage.setItem('employee_upd_other_skills', employee_upd_Other_Skills)
             }
         })
         document.getElementsByClassName('name_of_user')[0].innerHTML=output;

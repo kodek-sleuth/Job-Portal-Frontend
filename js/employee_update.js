@@ -13,7 +13,7 @@ function validate_Update_Form(e)
     const password_employee_update = document.getElementById('password_employee_update').value;
     const country_employee_update = document.getElementById('country_employee_update').value;
     const main_stack_employee_update = document.getElementById('main_stack_employee_update').value;
-    const other_stacks_employee_update = document.getElementById('other_stacks_employee_update').value;
+    const other_stacks_employee_update = document.getElementById('other_skills_employee_update').value;
     const work_status_employee_update = document.getElementById('work_status_employee_update').value;
     const dev_bio_employee_update = document.getElementById('dev_bio_employee_update').value;
 

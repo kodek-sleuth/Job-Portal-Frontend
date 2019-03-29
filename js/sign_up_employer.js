@@ -133,3 +133,10 @@ function revert()
 {
     window.location='/index.html'
 }
+
+document.getElementsByClassName('menu_icon_size_resp')[0].addEventListener('click', return_profile)
+
+function return_profile()
+{
+    window.location="/index.html"
+}
