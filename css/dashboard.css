@@ -320,6 +320,29 @@ button:focus
     margin-left: 30px;
 }
 
+.update_profile_btn
+{
+    border: 2px solid #17a2b8;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+    padding: 5px 38px;
+    text-decoration: none;
+    background: #17a2b8;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.update_profile_btn:hover
+{
+    border: 2px solid #C2649A;
+    background: #C2649A;
+}
+
+
 @media(max-width: 900px)
 {
     .profile_div

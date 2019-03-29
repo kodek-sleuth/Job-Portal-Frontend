@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodeVille Job-Portal</title>
+    <link rel="icon" type="image/ico" href="job.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Acme|Shadows+Into+Light|Lobster|Noto+Serif|Pacifico|Roboto|StaatlichesCoiny|Hind|Mukta|Poppins|Rubik|Bree+Serif|Slabo+27px|Bitter|Merriweather" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="form_housing">
+            <div class="title">
+                <h1 class="title_text">CODEVILLE-JOB-PORTAL</h1>
+            </div>
+            
+            <div class="tags">
+                <h2 class="login"><a href="/employer_login.html" style="color: #f3f3f3; text-decoration: none;">Login</a></h2>
+                <h2 class="signup"><a href="/employer_signup.html" style="color: rgb(223, 145, 0); text-decoration: none;">SignUp</a></h2>
+            </div>
+
+            <div id="badFeedBack"></div>
+            <div id="goodFeedBack"></div>
+
+            <form method="POST" id="employer_update" class="form">
+                <div class="form_divs">
+                    <input type="text" id="name_employer_update" placeholder="Name*" class="formcontrol"><br>
+                    <input type="text" id="username_employer_update" placeholder="Username" class="formcontrol"><br>
+                </div>
+                
+                <div class="form_divs">
+                    <input type="email" id="email_employer_update" placeholder="Email*" class="formcontrol"><br>
+                    <input type="password" id="password_employer_update" placeholder="Password*" class="formcontrol"><br>
+                </div>
+
+                <div class="form_divs">
+                    <input type="text" id="country_employer_update" placeholder="Country*" class="formcontrol"><br>
+                    <input type="text" id="company_employer_update" placeholder="Company*" class="formcontrol"><br>
+                </div>
+
+                <textarea id="dev_bio_employer_update" class="formcontrol_textarea" placeholder="This is where you enter your biography"></textarea><br>
+                <input type="submit" class="button" value="Update!">
+            
+            </form>
+            <h4 class="credits">Kodek Productions INC. All Rights Reserved</h4>
+            
+            <div class="menu_icon_resp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="menu_icon_size_resp">
+                    <path d="M16 128h416c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H16C7.16 32 0 39.16 0 48v64c0 8.84 7.16 16 16 16zm480 80H80c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16zm-64 176H16c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16z"/>
+                </svg>
+            </div>
+        
+        </div>
+
+        <div class="gradient_housing">
+            <div class="menu_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="menu_icon_size">
+                    <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/>
+                </svg>
+            </div>
+
+            <h1 class="gh_text">Get Skilled Programmers Fast</h1>
+        </div>
+    
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/employer_update_profile.js"></script>
+</body>
+</html>
