@@ -66,10 +66,10 @@ function get_Employees()
 
            output+=`
            <div id="demo" class="card">
-               <h4 id="name">Name: ${emp.Name}</h4>
-               <h4 id="expertise">Expertise: ${emp.Expertise}</h4>
-               <h4 id="username">Username: ${emp.Username}</h4>
-               <h4 id="work_status">Work Status: ${emp.Status}</h4>
+               <h4>Name: ${emp.Name}</h4>
+               <h4>Expertise: ${emp.Expertise}</h4>
+               <h4>Username: ${emp.Username}</h4>
+               <h4>Work Status: ${emp.Status}</h4>
                <a href="/messaging.html"><button class="message_btn">Message</button></a>
            </div>
        `;
@@ -105,6 +105,96 @@ function get_jobs()
 }
 get_jobs()
 
+function get_Employees_csharp()
+{
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/employees',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+           if(emp.Expertise=='Csharp')
+           {
+                output+=`
+                <div id="demo" class="card">
+                    <h4>Name: ${emp.Name}</h4>
+                    <h4>Expertise: ${emp.Expertise}</h4>
+                    <h4>Username: ${emp.Username}</h4>
+                    <h4>Work Status: ${emp.Status}</h4>
+                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
+                </div>`;
+                document.getElementById('get_employees_csharp').innerHTML=output;
+           }
+           
+        })
+        
+    });
+}
+get_Employees_csharp()
+
+function get_Employees_java()
+{
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/employees',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+           if(emp.Expertise=='Java')
+           {
+                output+=`
+                <div id="demo" class="card">
+                    <h4>Name: ${emp.Name}</h4>
+                    <h4>Expertise: ${emp.Expertise}</h4>
+                    <h4>Username: ${emp.Username}</h4>
+                    <h4>Work Status: ${emp.Status}</h4>
+                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
+                </div>`;
+                document.getElementById('get_employees_java').innerHTML=output;
+           }
+           
+        })
+        
+    });
+}
+get_Employees_java()
+
+function get_Employees_python()
+{
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/employees',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+           if(emp.Expertise=='Python')
+           {
+                output+=`
+                <div id="demo" class="card">
+                    <h4>Name: ${emp.Name}</h4>
+                    <h4>Expertise: ${emp.Expertise}</h4>
+                    <h4>Username: ${emp.Username}</h4>
+                    <h4>Work Status: ${emp.Status}</h4>
+                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
+                </div>`;
+                document.getElementById('get_employees_python').innerHTML=output;
+           }
+           
+        })
+        
+    });
+}
+get_Employees_python()
+
+
+
+
 document.getElementById('search_employee').addEventListener('submit', search_employees)
 function search_employees(e)
 {
@@ -138,38 +228,5 @@ function time_for_message()
 {
     window.location='/messaging.html'
 }
-
-function get_Employees_csharp()
-{
-    let output='';
-  
-    fetch('http://127.0.0.1:3000/employees',{
-        method: 'GET'
-    })
-    .then((res)=>res.json())
-    .then((data)=>{
-        data.forEach(emp =>{
-           if(emp.Expertise=='Java')
-           {
-                output+=`
-                <div id="demo" class="card">
-                    <h4 id="name">Name: ${emp.Name}</h4>
-                    <h4 id="expertise">Expertise: ${emp.Expertise}</h4>
-                    <h4 id="username">Username: ${emp.Username}</h4>
-                    <h4 id="work_status">Work Status: ${emp.Status}</h4>
-                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
-                </div>`;
-                document.getElementById('get_employees_csharp').innerHTML=output;
-           }
-           
-        })
-        
-    });
-}
-get_Employees_csharp()
-
-
-
-
 
 
