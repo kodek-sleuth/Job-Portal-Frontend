@@ -83,6 +83,7 @@ function validateForm(l)
 
                 else
                 {
+                    document.getElementsByClassName('button')[0].value='Submit'
                     $(function()
                         {
                             $(function()
@@ -96,7 +97,7 @@ function validateForm(l)
                         }
                     )
 
-                    document.getElementsByClassName('button')[0].value='Submit'
+                    
                 }
             })
            

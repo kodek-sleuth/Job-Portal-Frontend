@@ -81,7 +81,7 @@ function validateForm(l)
                         }
                     )
 
-                    document.getElementsByClassName('button').value='Submit'
+                    document.getElementsByClassName('button')[0].value='Submit'
                 }
             })
            
