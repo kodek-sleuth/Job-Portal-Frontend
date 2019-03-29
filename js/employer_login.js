@@ -49,7 +49,7 @@ function validateForm(l)
 
     else
     {
-        document.getElementsByClassName('button').value='Please wait....'
+        document.getElementsByClassName('button')[0].value='Please wait....'
         
         let username = document.getElementById('username_employer_login').value;
         let password = document.getElementById('password_employer_login').value;
@@ -96,7 +96,7 @@ function validateForm(l)
                         }
                     )
 
-                    document.getElementsByClassName('button').value='Submit'
+                    document.getElementsByClassName('button')[0].value='Submit'
                 }
             })
            
