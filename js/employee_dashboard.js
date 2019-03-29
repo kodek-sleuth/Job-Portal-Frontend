@@ -33,10 +33,6 @@ function change_names()
         data.forEach(emp =>{
             if(emp.Username==username)
             {
-                profile+=`<div id="demo" class="card">
-                <h3 id="name">Name: ${emp.Name} </h3>
-            </div>`
-
                 output+=`<h4>${emp.Name}</h4>`;
             }
         })
