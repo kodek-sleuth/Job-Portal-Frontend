@@ -53,6 +53,17 @@ function validate_Employer_Form(f)
 
                     window.location="/employee_dashboard.html"
                 }
+
+                else
+                {
+                    $(function()
+                    {
+    
+                        $('#badFeedBack').show(500);
+                        document.getElementById('badFeedBack').innerHTML='Failed To apply to job'
+                    }
+                    )
+                }
             })
            
             return true

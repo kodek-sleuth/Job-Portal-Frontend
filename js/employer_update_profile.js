@@ -115,6 +115,17 @@ function validate_Update_Form(e)
                     sessionStorage.removeItem('employer_upd_bio');
                     sessionStorage.removeItem('employer_username');
                 }
+
+                else
+                {
+                    $(function()
+                    {
+    
+                        $('#badFeedBack').show(500);
+                        document.getElementById('badFeedBack').innerHTML='Failed To Update Profile'
+                    }
+                    )
+                }
             })
            
             return true

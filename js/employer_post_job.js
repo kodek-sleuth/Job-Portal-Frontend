@@ -61,6 +61,17 @@ function validate_Job_Form(f)
                     }
                     )
                 }
+
+                else
+                {
+                    $(function()
+                    {
+    
+                        $('#badFeedBack').show(500);
+                        document.getElementById('badFeedBack').innerHTML='Failed To Post Job'
+                    }
+                    )
+                }
             })
            
             return true

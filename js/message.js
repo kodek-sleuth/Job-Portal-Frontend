@@ -85,6 +85,17 @@ function validate_Employer_Form(f)
 
                     window.location="/employer_dashboard.html"
                 }
+
+                else
+                {
+                    $(function()
+                    {
+    
+                        $('#badFeedBack').show(500);
+                        document.getElementById('badFeedBack').innerHTML='Message Was not sent';
+                    }
+                    )
+                }
             })
            
             return true
