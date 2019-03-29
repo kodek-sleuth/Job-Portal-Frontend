@@ -35,18 +35,12 @@ function change_names()
             {
                 profile+=`<div id="demo" class="card">
                 <h4 id="name">Name: ${emp.Name} </h4>
-                <h4 id="expertise">Username: ${emp.Username} </h>
-                <h4 id="username">Company: ${emp.Company}</h4>
-                <h4 id="work_status">Country: ${emp.Country} </h4>
-                <h4 id="company">Biography: ${emp.Biography}</h4>
-                <h4 id="biography">Member Since: ${emp.Member_Since}</h4>
             </div>`
 
                 output+=`<h4>${emp.Name}</h4>`;
             }
         })
         document.getElementsByClassName('name_of_user')[0].innerHTML=output;
-        document.getElementById('get_employer_profile').innerHTML=profile;
     });
 
 }
@@ -78,122 +72,6 @@ function get_Employees()
     });
 }
 get_Employees()
-
-
-function get_jobs()
-{
-    let output='';
-  
-    fetch('https://job-portal-online.herokuapp.com/employee/'+username+'/posted',{
-        method: 'GET'
-    })
-    .then((res)=>res.json())
-    .then((data)=>{
-        data.forEach(job =>{
-        
-           output+=`<div id="demo_2" class="card">
-           <div class="card_type">
-                <h3 class="job_type">Type: ${job.Job_Type}</h3>
-                <h3 class="job_date">Date Posted: ${job.Date_Posted}</h3>
-           </div>
-           <h3 class="job_title">Title: ${job.Job_Title}</h3>
-           <h3 class="job_stack">Stack: ${job.Stack}</h3>
-       </div>`;
-        })
-        document.getElementById('get_jobs_posted').innerHTML=output;
-    });
-}
-get_jobs()
-
-function get_Employees_csharp()
-{
-    let output='';
-  
-    fetch('http://127.0.0.1:3000/employees',{
-        method: 'GET'
-    })
-    .then((res)=>res.json())
-    .then((data)=>{
-        data.forEach(emp =>{
-           if(emp.Expertise=='Csharp')
-           {
-                output+=`
-                <div id="demo" class="card">
-                    <h4>Name: ${emp.Name}</h4>
-                    <h4>Expertise: ${emp.Expertise}</h4>
-                    <h4>Username: ${emp.Username}</h4>
-                    <h4>Work Status: ${emp.Status}</h4>
-                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
-                </div>`;
-                document.getElementById('get_employees_csharp').innerHTML=output;
-           }
-           
-        })
-        
-    });
-}
-get_Employees_csharp()
-
-function get_Employees_java()
-{
-    let output='';
-  
-    fetch('http://127.0.0.1:3000/employees',{
-        method: 'GET'
-    })
-    .then((res)=>res.json())
-    .then((data)=>{
-        data.forEach(emp =>{
-           if(emp.Expertise=='Java')
-           {
-                output+=`
-                <div id="demo" class="card">
-                    <h4>Name: ${emp.Name}</h4>
-                    <h4>Expertise: ${emp.Expertise}</h4>
-                    <h4>Username: ${emp.Username}</h4>
-                    <h4>Work Status: ${emp.Status}</h4>
-                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
-                </div>`;
-                document.getElementById('get_employees_java').innerHTML=output;
-           }
-           
-        })
-        
-    });
-}
-get_Employees_java()
-
-function get_Employees_python()
-{
-    let output='';
-  
-    fetch('http://127.0.0.1:3000/employees',{
-        method: 'GET'
-    })
-    .then((res)=>res.json())
-    .then((data)=>{
-        data.forEach(emp =>{
-           if(emp.Expertise=='Python')
-           {
-                output+=`
-                <div id="demo" class="card">
-                    <h4>Name: ${emp.Name}</h4>
-                    <h4>Expertise: ${emp.Expertise}</h4>
-                    <h4>Username: ${emp.Username}</h4>
-                    <h4>Work Status: ${emp.Status}</h4>
-                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
-                </div>`;
-                document.getElementById('get_employees_python').innerHTML=output;
-           }
-           
-        })
-        
-    });
-}
-get_Employees_python()
-
-
-
 
 document.getElementById('search_employee').addEventListener('submit', search_employees)
 function search_employees(e)

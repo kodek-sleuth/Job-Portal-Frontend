@@ -46,44 +46,32 @@ function change_names()
 }
 change_names()
 
-document.getElementById('search_employee').addEventListener('submit', search_employees)
-function search_employees(e)
+
+function get_Employees_python()
 {
-    e.preventDefault()
-    let output = ''
-    var result=document.getElementById('search').value;
-    fetch('http://127.0.0.1:3000/empoyeer/employees',{
-        method: 'POST',
-        headers:{
-            'Accept':'application/json, text/plain, */*',
-            'Content-type':'application/json'
-        },
-          
-        body:JSON.stringify({"Username":result})
+    let output='';
+  
+    fetch('http://127.0.0.1:3000/employees',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(emp =>{
+           if(emp.Expertise=='Python')
+           {
+                output+=`
+                <div id="demo" class="card">
+                    <h4>Name: ${emp.Name}</h4>
+                    <h4>Expertise: ${emp.Expertise}</h4>
+                    <h4>Username: ${emp.Username}</h4>
+                    <h4>Work Status: ${emp.Status}</h4>
+                    <a href="/messaging.html"><button class="message_btn">Message</button></a>
+                </div>`;
+                document.getElementById('get_employees_python').innerHTML=output;
+           }
+           
         })
-        .then((response)=> response.json())
-        .then((data)=>{ 
-
-            document.getElementById('name').innerHTML='Name: ' +data.Name;  
-            document.getElementById('expertise').innerHTML='Expertise: ' +data.Expertise;
-            document.getElementById('username').innerHTML='Username: ' +data.Username;
-            document.getElementById('status').innerHTML='Work Status: ' +data.Status;
-        });   
         
-        
+    });
 }
-
-document.getElementById('to_messaging').addEventListener('click', time_for_message)
-
-function time_for_message()
-{
-    window.location='/messaging.html'
-}
-
-
-
-
-
-
-
-
+get_Employees_python()

@@ -46,44 +46,28 @@ function change_names()
 }
 change_names()
 
-document.getElementById('search_employee').addEventListener('submit', search_employees)
-function search_employees(e)
+
+function get_jobs()
 {
-    e.preventDefault()
-    let output = ''
-    var result=document.getElementById('search').value;
-    fetch('http://127.0.0.1:3000/empoyeer/employees',{
-        method: 'POST',
-        headers:{
-            'Accept':'application/json, text/plain, */*',
-            'Content-type':'application/json'
-        },
-          
-        body:JSON.stringify({"Username":result})
+    let output='';
+  
+    fetch('https://job-portal-online.herokuapp.com/employee/'+username+'/posted',{
+        method: 'GET'
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        data.forEach(job =>{
+        
+           output+=`<div id="demo_2" class="card">
+           <div class="card_type">
+                <h3 class="job_type">Type: ${job.Job_Type}</h3>
+                <h3 class="job_date">Date Posted: ${job.Date_Posted}</h3>
+           </div>
+           <h3 class="job_title">Title: ${job.Job_Title}</h3>
+           <h3 class="job_stack">Stack: ${job.Stack}</h3>
+       </div>`;
         })
-        .then((response)=> response.json())
-        .then((data)=>{ 
-
-            document.getElementById('name').innerHTML='Name: ' +data.Name;  
-            document.getElementById('expertise').innerHTML='Expertise: ' +data.Expertise;
-            document.getElementById('username').innerHTML='Username: ' +data.Username;
-            document.getElementById('status').innerHTML='Work Status: ' +data.Status;
-        });   
-        
-        
+        document.getElementById('get_jobs_posted').innerHTML=output;
+    });
 }
-
-document.getElementById('to_messaging').addEventListener('click', time_for_message)
-
-function time_for_message()
-{
-    window.location='/messaging.html'
-}
-
-
-
-
-
-
-
-
+get_jobs()
