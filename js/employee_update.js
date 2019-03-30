@@ -102,7 +102,7 @@ function validate_Update_Form(e)
         const dev_bio_employee_update = document.getElementById('dev_bio_employee_update').value;
     
     
-        fetch('https://job-portal-online.herokuapp.com/'+db_Username_employee+'/update',{
+        fetch('https://job-portal-online.herokuapp.com/emploe'+db_Username_employee+'/update',{
             method:'PUT',
             headers:{
                 'Accept':'application/json, text/plain, */*',
