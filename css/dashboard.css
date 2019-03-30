@@ -244,7 +244,12 @@ button:focus
 #get_jobs_posted
 {
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 50px;
+}
+
+.dummy_card
+{
+    margin-left: 50px;
 }
 
 .message_btn:hover
