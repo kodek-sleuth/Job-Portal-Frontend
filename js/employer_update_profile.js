@@ -72,6 +72,7 @@ function validate_Update_Form(e)
 
     else
     {
+        document.getElementsByClassName('button')[0].value='Please wait...'
         
         const name_employer_update = document.getElementById('name_employer_update').value;
         const username_employer_update = document.getElementById('username_employer_update').value;
@@ -122,9 +123,11 @@ function validate_Update_Form(e)
                     {
     
                         $('#badFeedBack').show(500);
-                        document.getElementById('badFeedBack').innerHTML='Failed To Update Profile'
+                        document.getElementById('badFeedBack').innerHTML='Failed To Update Profile';
                     }
                     )
+
+                    document.getElementsByClassName('button')[0].value='Update'
                 }
             })
            

@@ -101,6 +101,7 @@ function validate_Update_Form(e)
 
     else
     {
+        document.getElementsByClassName('button')[0].value= 'Please wait....'
         
         const name_employee_update = document.getElementById('name_employee_update').value;
         const username_employee_update = document.getElementById('username_employee_update').value;
@@ -159,6 +160,8 @@ function validate_Update_Form(e)
                         document.getElementById('badFeedBack').innerHTML='Failed To Update Profile'
                     }
                     )
+
+                    document.getElementsByClassName('button')[0].value='Update'
                 }
             })
            
