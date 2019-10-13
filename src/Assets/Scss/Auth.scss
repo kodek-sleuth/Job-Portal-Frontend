@@ -1,0 +1,286 @@
+.auth-wrapper {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+}
+
+.auth-right {
+    background-image:  linear-gradient(rgba(36,28,21,0.3), rgba(36,28,21,0.3)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80');
+    background-position: right;
+    background-size: cover;
+
+    div {
+        display: inline-block;
+        background: #1B9CFC;
+        border-radius: 50%;
+        height: 55px;
+        width: 55px;
+        vertical-align: middle;
+        text-align: center;
+        margin-top: 55%;
+        margin-left: 10%;
+        cursor: pointer;
+    }
+
+    .auth-video-icon {
+        margin-top: 30%;
+        height: 20px;
+        width: 20px;
+        color: #ffffff;
+    }
+
+    span:nth-child(2) {
+        display: block;
+        margin-left: 10%;
+        font-size: 40px;
+        letter-spacing: 5px;
+        color: #ffffff;
+        font-weight: 600px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    span:nth-child(3) {
+        margin-left: 10%;
+        color: #d4d1d1;
+        letter-spacing: 1px;
+    }
+
+}
+
+.auth-left {
+    padding: 50px;
+    padding-left: 15%;
+
+    #auth-logo {
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin-left: 25%; 
+    }
+
+    .auth-subtitle {
+        display: block;
+        margin-top: 20%;
+        color: rgba(17,17,17,0.6);
+        margin-bottom: 0.5%;
+
+        a {
+            color: #1B9CFC;
+            &:hover {
+                color: #696969;
+            }
+        }
+    }
+
+    .auth-form-input {
+        display: flex;
+        width: 100%;
+
+        div {
+            display: block;
+            padding: 2%;
+            text-align: center;
+            border: 1px solid rgba(36,28,21,0.3);
+        }
+
+        img {
+            filter: invert(37%) sepia(10%) saturate(0%) hue-rotate(251deg) brightness(99%) contrast(73%);
+            width: 20px;
+            padding-top: 10px;
+
+        }
+
+        input {
+            width: 100%;
+            outline: none;
+            max-width: 80%;
+            box-sizing: border-box;
+            border: 1px solid rgba(36,28,21,0.3);
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 300;
+            min-height: 45px;
+            line-height: 20px;
+            letter-spacing: 1px;
+            padding: 0 15px;
+            color: #000;
+            font-weight: 330;
+        }
+    }
+}
+
+.auth-error-handling span {
+    display: block;
+    font-size: 13.5px;
+    color: #e74c3c;
+    margin-bottom: 5%;
+    width: 85%;
+}
+
+.auth-form-section-two {
+    margin-top: 5%;
+    width: 100%;
+
+    span {
+        width: 100%;
+        max-width: 85%;
+        display: block;
+        text-align: center;
+        color: rgba(17,17,17,0.6);
+        cursor: pointer;
+        text-decoration: underline;
+        &:hover {
+            color: #1B9CFC;
+            text-decoration: underline;
+        }
+    }
+    
+    button {
+        border-radius: 3px;
+        font-family: 'Barlow', sans-serif;
+        background-color: #1B9CFC;
+        width: 100%;
+        max-width: 88%;
+        min-height: 45px;
+        line-height: 20px;
+        padding: 0 15px;
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 500;
+        text-align: center;
+        border: 1px solid transparent;
+        cursor: pointer;
+        outline: none;
+        margin-bottom: 3%;
+        &:hover{
+            box-shadow: 1px 1px 15px 1px #1B9CFC;
+        }
+    }
+}
+
+.auth-social-btns {
+    display: flex;
+    margin-top: 5%;
+    input {
+        width: 100%;
+        outline: none;
+        max-width: 80%;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 100;
+        min-height: 40px;
+        line-height: 20px;
+        padding: 0 15px;
+        border: 1px solid transparent;
+        color: #ffffff;
+        font-weight: 400;
+        cursor: pointer;
+        border-left: 1.5px solid #ffffff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    span {
+        padding: .5%;
+        padding-top: 13px;
+        padding-right: 2.5%;
+        padding-left: 2.3%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        cursor: pointer;
+
+        img {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .auth-google {
+        background-color: #e74c3c;
+        &:hover {
+            box-shadow: 1px 1px 15px 1px #e74c3c;
+        }
+    }
+
+    .auth-linkedIn {
+        background-color: #20638a;
+        &:hover {
+            box-shadow: 1px 1px 15px 1px #20638a;
+        }
+    }
+
+    .auth-btn-color {
+        filter: invert(100%) sepia(0%) saturate(7488%) hue-rotate(148deg) brightness(100%) contrast(103%);
+    }
+
+}
+
+.auth-copyright {
+    display: block;
+    width: 90%;
+    margin-top: 10%;
+    color: rgba(17,17,17,0.6);
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .auth-wrapper{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .auth-right {
+        display: none;
+    }
+
+    .auth-left {
+        padding: 0;
+        padding-left: 8%;
+
+        #auth-logo {
+            height: 50px;
+            width: 50px;
+            margin-left: 10%;
+            margin-bottom: 40%;
+        }
+    }
+
+    .auth-form-section-two {
+        button {
+            margin-left: 13%;
+            max-width: 68%;
+        }
+
+        span {
+            margin-left: 5%;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .auth-wrapper{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .auth-right {
+        display: none;
+    }
+
+    .auth-left {
+        #auth-logo {
+            margin-left: 30%;
+        }
+    }
+
+    .auth-form-section-two {
+        button {
+            max-width: 65%;
+            margin-left: 13%;
+        }
+
+        span {
+            margin-left: 4%;
+        }
+    }
+}

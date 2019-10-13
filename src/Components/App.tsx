@@ -1,6 +1,6 @@
 import React from 'react';
 import Routes from './Routes/Routes';
-import '../Assets/Sass/App.scss'
+import '../Assets/Scss/App.scss'
  
 const App: React.FC = () => {
   return (

@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 body {
-    background: yellow;
-}
+    font-family: "Noto Sans",sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #ffffff;
+  }
