@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
+import { ApolloProvider } from "react-apollo";
 import Routes from './Routes/Routes';
 import '../Assets/Scss/App.scss'
+import {client} from '../Helpers/apolloClient';
  
-const App: React.FC = () => {
+const App: FC = () => {
   return (
-    <div>
-      <Routes />
-    </div>
+    <ApolloProvider client={client}>
+      <div>
+        <Routes />
+      </div>
+    </ApolloProvider>
   );
 }
 

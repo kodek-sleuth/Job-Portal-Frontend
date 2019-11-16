@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-import { faVideo } from "@fortawesome/free-solid-svg-icons";
+import { faVideo, faEnvelope, faKey, faCity } from "@fortawesome/free-solid-svg-icons";
+import { faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {Button, SocialButton} from '../../Common/Elements/Button'
+import FormInput from '../../Common/Elements/FormInput'
+import Input from '../../Common/Elements/Input'
 import validateForm from '../../../Helpers/validateForm'
 import logo from '../../../Assets/Icons/logo.png'
 import '../../../Assets/Scss/Auth.scss'
@@ -89,32 +93,38 @@ export class Auth extends Component<checkAuth, authState> {
                         <span className="auth-subtitle">Need an account?<a href="/signup"> Create an account!</a></span>
                         <div className="auth-form">
                             <form onSubmit={this.handleSubmitLogin}>
-                                <div className="auth-form-input">
-                                    <div><img src="https://image.flaticon.com/icons/svg/126/126516.svg" alt="" /></div>
-                                    <input placeholder="Email" onChange={this.handleInput} name="email" />
-                                </div>
-                                <div className="auth-error-handling">
-                                    <span>{ emailError }</span>
-                                </div>
-                                <div className="auth-form-input">
-                                    <div><img src="https://image.flaticon.com/icons/svg/481/481195.svg" alt="" /></div>
-                                    <input placeholder="Password" onChange={this.handleInput} name="password" />
-                                </div>
-                                <div className="auth-error-handling">
-                                    <span>{ passwordError }</span>
-                                </div>
+                                <FormInput 
+                                    divClassName="auth-form-input"
+                                    inputValue="Email"
+                                    formIcon={faEnvelope}
+                                    inputType="email"
+                                    errorClassName="auth-error-handling"
+                                    error={emailError}
+                                 />
+                                <FormInput 
+                                    divClassName="auth-form-input"
+                                    inputValue="Password"
+                                    formIcon={faKey}
+                                    inputType="password"
+                                    errorClassName="auth-error-handling"
+                                    error={passwordError}
+                                 />
                                 <div className="auth-form-section-two">
-                                    <button type="submit" style={ !email || !password ? { cursor: 'not-allowed', backgroundColor: 'rgba(36,28,21,0.3)', boxShadow: 'none' } : { cursor: 'pointer' }}>Login</button>
                                     <span>Forgot Password?</span>
+                                    <Input action="submit" value="Login" />
                                 </div>
-                                <div className="auth-social-btns">
-                                    <span className="auth-google"><img src="https://image.flaticon.com/icons/svg/60/60786.svg" className="auth-btn-color" alt="" /></span>
-                                    <input type="button" className="auth-google" value="Sign in with Google"/>
-                                </div>
-                                <div className="auth-social-btns">
-                                    <span className="auth-linkedIn" style={{ backgroundColor: "#20638a" }}><img src="https://image.flaticon.com/icons/svg/152/152815.svg" className="auth-btn-color" alt="" /></span>
-                                    <input type="button" className="auth-linkedIn" value="Sign in with LinkedIn"/>
-                                </div>
+                                <SocialButton
+                                    divClassName="auth-social-btns"
+                                    spanClassName="auth-google"
+                                    buttonIcon={faGoogle}
+                                    buttonValue="Login with Google"
+                                />
+                                <SocialButton
+                                    divClassName="auth-social-btns"
+                                    spanClassName="auth-linkedIn"
+                                    buttonIcon={faLinkedinIn}
+                                    buttonValue="Login with LinkedIn"
+                                />
                             </form>
                             <span className="auth-copyright">©2019–20-- All Rights Reserved. Workhaven® is a registered trademark. Privacy and Terms apply.</span>
                         </div>
@@ -136,39 +146,46 @@ export class Auth extends Component<checkAuth, authState> {
                     <span className="auth-subtitle">Have an account<a href="/login"> Login!</a></span>
                     <div className="auth-form">
                         <form onSubmit={this.handleSubmitSignup}>
-                            <div className="auth-form-input">
-                                <div><img src="https://image.flaticon.com/icons/svg/1250/1250645.svg" alt="" /></div>
-                                <input placeholder="Name/Company" onChange={this.handleInput} name="name" />
-                            </div>
-                            <div className="auth-error-handling">
-                                <span>{ nameError }</span>
-                            </div>
-                            <div className="auth-form-input">
-                                <div><img src="https://image.flaticon.com/icons/svg/126/126516.svg" alt="" /></div>
-                                <input placeholder="Email" onChange={this.handleInput} name="email" />
-                            </div>
-                            <div className="auth-error-handling">
-                                <span>{ emailError }</span>
-                            </div>
-                            <div className="auth-form-input">
-                                <div><img src="https://image.flaticon.com/icons/svg/481/481195.svg" alt="" /></div>
-                                <input placeholder="Password" onChange={this.handleInput} name="password" />
-                            </div>
-                            <div className="auth-error-handling">
-                                <span>{ passwordError }</span>
-                            </div>
+                            <FormInput 
+                                divClassName="auth-form-input"
+                                inputValue="Name/Company"
+                                formIcon={faCity}
+                                inputType="text"
+                                errorClassName="auth-error-handling"
+                                error={nameError}
+                            />
+                            <FormInput 
+                                divClassName="auth-form-input"
+                                inputValue="Email"
+                                formIcon={faEnvelope}
+                                inputType="email"
+                                errorClassName="auth-error-handling"
+                                error={emailError}
+                            />
+                            <FormInput 
+                                divClassName="auth-form-input"
+                                inputValue="Password"
+                                formIcon={faKey}
+                                inputType="password"
+                                errorClassName="auth-error-handling"
+                                error={passwordError}
+                            />
                             <div className="auth-form-section-two">
-                                <button type="submit" style={ !email || !password || !name ? { cursor: 'not-allowed', backgroundColor: 'rgba(36,28,21,0.3)', boxShadow: 'none' } : { cursor: 'pointer' }}>Login</button>
                                 <span>Forgot Password?</span>
+                                <Input action="submit" value="Login" />
                             </div>
-                            <div className="auth-social-btns">
-                                <span className="auth-google"><img src="https://image.flaticon.com/icons/svg/60/60786.svg" className="auth-btn-color" alt="" /></span>
-                                <input placeholder="Email or Username" type="button" className="auth-google" value="Sign in with Google"/>
-                            </div>
-                            <div className="auth-social-btns">
-                                <span className="auth-linkedIn" style={{ backgroundColor: "#20638a" }}><img src="https://image.flaticon.com/icons/svg/152/152815.svg" className="auth-btn-color" alt="" /></span>
-                                <input placeholder="Email or Username" type="button" className="auth-linkedIn" value="Sign in with LinkedIn "/>
-                            </div>
+                            <SocialButton
+                                divClassName="auth-social-btns"
+                                spanClassName="auth-google"
+                                buttonIcon={faGoogle}
+                                buttonValue="Signup with Google"
+                            />
+                            <SocialButton
+                                divClassName="auth-social-btns"
+                                spanClassName="auth-linkedIn"
+                                buttonIcon={faLinkedinIn}
+                                buttonValue="Signup with LinkedIn"
+                            />
                         </form>
                         <span className="auth-copyright">©2019–20-- All Rights Reserved. Workhaven® is a registered trademark. Privacy and Terms apply.</span>
                     </div>

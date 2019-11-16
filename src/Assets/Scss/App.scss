@@ -1,3 +1,5 @@
+@import "Variables";
+
 * {
     margin: 0;
     padding: 0;
@@ -8,5 +10,5 @@ body {
     font-family: "Noto Sans",sans-serif;
     font-size: 16px;
     line-height: 1.7;
-    background-color: #ffffff;
+    background-color: $White;
   }
