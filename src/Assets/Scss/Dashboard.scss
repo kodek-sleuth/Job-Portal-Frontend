@@ -1,4 +1,5 @@
 @import "Variables";
+@import "Mixins";
 
 .dash_container{
     background-color: $LightBlue;
@@ -65,113 +66,6 @@
     margin-left: 172px; 
 }
 
-.dash_content{
-    margin-top: 3%;
-    margin-left: 5%;
-
-    .dash_content_logo{
-        color: $DarkBlue;
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    .dash_content_search{
-        display: flex;
-        flex-direction: row;
-        margin-top: 2%;
-
-        span{
-            background-color: $White;
-            height: calc(2.75rem + 2px);
-            padding: .625rem .75rem;
-        }
-
-        input{
-            width: 100%;
-            outline: none;
-            max-width: 20%;
-            box-sizing: border-box;
-            display: block;
-            font-size: 16px;
-            font-weight: 550;
-            letter-spacing: 1px;
-            color: $Grey;
-            font-weight: 400;
-            background-color: $White;
-            height: calc(2.75rem + 2px);
-            padding: .625rem .75rem;
-            border: 0;
-        }
-    }
-
-    span{
-        display: block;
-    }
-
-    .dash_content_overview{
-        margin-top: 2%;
-
-        .dash_content_overview_items{
-            margin-top: 2%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
-
-            .dash_content_overview_card{
-                box-shadow: 0 4px 8px 0 #262d3d25;
-                transition: 0.3s;
-                border-radius: 5px;
-                padding: 10px 16px;
-                margin-right: 25px;
-                background-color: $White;
-            }
-        }
-    }
-
-    .dash_content_overview_figures{
-        color: $DarkBlue;
-    }
-
-    .dash_content_jobs_ml{
-        margin-top: 4%;
-
-        .dash_content_jobs_ml_items{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-
-            img{
-                height: 64px;
-                width: 64px;
-            }
-
-            .dash_content_jobs_ml_icons{
-                margin-right: 5px;
-            }
-
-            .dash_content_jobs_ml_card_item{
-                box-shadow: 0 4px 8px 0 #262d3d25;
-                transition: 0.3s;
-                border-radius: 5px;
-                padding: 10px 16px;
-                margin-right: 25px;
-                background-color: $White;
-                margin-top: 5%;
-                cursor: pointer;
-
-                div{
-                    display: flex;
-                    flex-direction: row;
-                    margin-top: 7%;
-
-                    span:nth-child(1){
-                        margin-right: 45%;
-                        border-top: 1px solid $Grey;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .dash_navbar{
     min-height: 8%;
     background-color: $White;   
@@ -180,8 +74,7 @@
     color: $DarkBlue;
     
     .dash_navbar_items{
-        display: flex;
-        flex-direction: row;
+        @include grid(true);
         margin-left: 40%;
         padding-top: 1%;
         padding-bottom: 1%;

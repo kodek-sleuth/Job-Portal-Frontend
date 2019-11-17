@@ -1,0 +1,30 @@
+@mixin button($width, $max-width, $bc, $color) {
+    width: $width;
+    max-width: $max-width;
+    background-color: $bc;
+    box-sizing: border-box;
+    outline: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    color: $color;
+    height: calc(2.75rem + 2px);
+    cursor: pointer;
+    border: 0;
+}
+
+@mixin grid($flex) {
+    @if $flex {
+        display: flex;
+        flex-direction: row;
+    } @else {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@mixin iconspan() {
+    height: calc(2.75rem + 2px);
+    padding: .625rem .75rem;
+}

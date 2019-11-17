@@ -1,0 +1,101 @@
+@import "Variables";
+@import "Mixins";
+
+.dash_content{
+    margin-top: 3%;
+    margin-left: 5%;
+
+    .dash_content_logo{
+        color: $DarkBlue;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .dash_content_search{
+        @include grid(true);
+        margin-top: 2%;
+
+        span{
+            background-color: $White;
+            @include iconspan();
+        }
+
+        input{
+            @include button(100%, 20%, $White, $Grey);
+            padding: .625rem .75rem;
+            border: 0;
+        }
+
+        .dash_button_search{
+            @include button(45%, 20%, $Blue, $White);
+            border-radius: 3px;
+            margin-right: 2%;
+        }
+    }
+
+    span{
+        display: block;
+    }
+
+    .dash_content_overview{
+        margin-top: 2%;
+
+        .dash_content_overview_items{
+            margin-top: 2%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
+
+            .dash_content_overview_card{
+                box-shadow: 0 4px 8px 0 #262d3d25;
+                transition: 0.3s;
+                border-radius: 5px;
+                padding: 10px 16px;
+                margin-right: 25px;
+                background-color: $White;
+            }
+        }
+    }
+
+    .dash_content_overview_figures{
+        color: $DarkBlue;
+    }
+
+    .dash_content_jobs_ml{
+        margin-top: 4%;
+
+        .dash_content_jobs_ml_items{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            img{
+                height: 64px;
+                width: 64px;
+            }
+
+            .dash_content_jobs_ml_icons{
+                margin-right: 5px;
+            }
+
+            .dash_content_jobs_ml_card_item{
+                box-shadow: 0 4px 8px 0 #262d3d25;
+                transition: 0.3s;
+                border-radius: 5px;
+                padding: 10px 16px;
+                margin-right: 25px;
+                background-color: $White;
+                margin-top: 5%;
+                cursor: pointer;
+
+                div{
+                    @include grid(true);
+                    margin-top: 7%;
+
+                    span:nth-child(1){
+                        margin-right: 45%;
+                        border-top: 1px solid $Grey;
+                    }
+                }
+            }
+        }
+    }
+}

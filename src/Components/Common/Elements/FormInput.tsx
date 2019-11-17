@@ -12,11 +12,21 @@ interface InputProps {
     inputClassName?: string
     errorClassName?: string
     error?: string
+    location?: boolean
 }
 
 const FormInput: FC<InputProps> = (props) => {
     const {divClassName, inputValue, inputName, inputType, formIcon, 
-        inputClassName, error, errorClassName} = props
+        inputClassName, error, errorClassName, location} = props
+    if(location){
+        return(
+            <div className={divClassName}>
+                <span><FontAwesomeIcon icon={formIcon} /></span>
+                <Input value={inputValue} classname={inputClassName} action={inputType}/>
+                <Input classname="dash_button_search" action="submit" value="Search" />
+            </div>
+        )
+    }
     return (
         <div>
             <div className={divClassName}>

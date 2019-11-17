@@ -1,0 +1,127 @@
+@import "Variables";
+@import "Mixins";
+
+.dash_search_data{
+    @include grid(true);
+}
+
+.dash_content-fj{
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.dash_filter_by{
+    background-color: $White;
+    height: 100%;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.dash_filter_items{
+    @include grid(true);
+    height: 100%;
+    width: 172px;
+    min-width: 120px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-bottom: 10%;
+
+    .dash_checkbox_label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        height: 20px;
+        width: 24px;
+        clear: both;
+    }
+    
+    .dash_checkbox_label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .dash_checkbox_label .dash_checkbox_custom {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        transition: all 0.3s ease-out;
+        border: 1px solid $Blue;
+    }
+    
+    
+    .dash_checkbox_label input:checked ~ .dash_checkbox_custom {
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        -webkit-transform: rotate(0deg) scale(1);
+        -ms-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+        opacity:1;
+        border: 2px solid #FFFFFF;
+    }
+    
+    
+    .dash_checkbox_label .dash_checkbox_custom::after {
+        position: absolute;
+        content: "";
+        left: 12px;
+        top: 12px;
+        height: 0px;
+        width: 0px;
+        border-radius: 5px;
+        border: solid #009BFF;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(0deg) scale(0);
+        -ms-transform: rotate(0deg) scale(0);
+        transform: rotate(0deg) scale(0);
+        opacity:1;
+        transition: all 0.3s ease-out;
+    }
+    
+    
+    .dash_checkbox_label input:checked ~ .dash_checkbox_custom::after {
+      -webkit-transform: rotate(45deg) scale(1);
+      -ms-transform: rotate(45deg) scale(1);
+      transform: rotate(45deg) scale(1);
+      opacity:1;
+      left: 8px;
+      top: 3px;
+      width: 6px;
+      height: 12px;
+      border: solid #009BFF;
+      border-width: 0 2px 2px 0;
+      background-color: transparent;
+      border-radius: 0;
+    }
+}
+
+.dash_filter_salary{
+    margin-top: 15%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    color: $DarkBlue;
+}
+
+.dash_job_search_container{
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .dash_job_search {
+        display: grid;
+        background-color: $White;
+        grid-template-columns: 45% 55%;
+        width: 100%;
+        padding-bottom: 5px;
+        box-shadow: 0 4px 8px 0 #262d3d25;
+        margin-top: 3%;
+    
+        .dash_content_search input{
+            max-width: 80%;
+        }
+    }
+}
