@@ -1,20 +1,25 @@
 @import "Variables";
 @import "Mixins";
 
-.dash_search_data{
-    @include grid(true);
-}
-
 .dash_content-fj{
     margin-left: 0;
     margin-top: 0;
 }
+
+.dash_search_data{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
 
 .dash_filter_by{
     background-color: $White;
     height: 100%;
     min-height: 100vh;
     padding: 50px;
+    // position: fixed;
+    // z-index: 1000;
+    // top: 0;
 }
 
 .dash_filter_items{
@@ -108,20 +113,48 @@
 
 .dash_job_search_container{
     width: 100%;
-    margin-left: 5%;
     margin-right: 5%;
-
-    .dash_job_search {
-        display: grid;
-        background-color: $White;
-        grid-template-columns: 45% 55%;
-        width: 100%;
-        padding-bottom: 5px;
-        box-shadow: 0 4px 8px 0 #262d3d25;
-        margin-top: 3%;
+    overflow: scroll;
     
-        .dash_content_search input{
-            max-width: 80%;
-        }
+}
+
+.dash_job_search {
+    display: grid;
+    background-color: $White;
+    grid-template-columns: 45% 55%;
+    width: 100%;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 #262d3d25;
+    margin-top: 3%;
+
+    .dash_content_search input{
+        max-width: 80%;
     }
+}
+
+.dash_jobs_section{
+
+    .dash_jobs_section_items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 15%;
+    }
+
+    .dash_content_jobs_ml_card_item{
+        box-shadow: 0 4px 8px 0 #262d3d25;
+        transition: 0.3s;
+        border-radius: 5px;
+        padding: 10px 16px;
+        margin-right: 25px;
+        background-color: $White;
+        cursor: pointer;
+        margin-top: 5%;
+        
+    }
+
+    img {
+        height: 64px;
+        width: 64px;
+    }
+
 }

@@ -8,9 +8,22 @@ import CheckBox from '../../Common/Elements/CheckBox';
 import '../../../Assets/Scss/Dashboard.scss';
 import '../../../Assets/Scss/DashHome.scss';
 import '../../../Assets/Scss/DashFJ.scss';
+import JobCard from '../../Common/Dashboard/JobCard';
 
 class FindJobs extends Component {
     render() {
+        const cards = [];
+        for(let i=1; i<19; i++){
+            cards.push(
+                <JobCard 
+                    containerClass="dash_content_jobs_ml_card_item"
+                    title="Java Developer"
+                    name="Trivilia"
+                    location="Barcelona, Spain"
+                    date="2 weeks ago"
+                    imgLink="https://image.flaticon.com/icons/svg/281/281764.svg"
+                />)
+        }
         return (
             <Fragment>
                 <div className="dash_container">
@@ -19,6 +32,7 @@ class FindJobs extends Component {
                         <DashbordNavbar />
                         <div className="dash_content dash_content-fj">
                             <div className="dash_search_data">
+
                                 <div className="dash_filter_by">
                                     <span>Filter By</span>
                                     <span className="dash_filter_salary">Salary Estimate</span>
@@ -64,21 +78,13 @@ class FindJobs extends Component {
 
                                     <div className="dash_jobs_section">
                                         <span>Showing 9 of 100 results</span>
-                                        <div className="dash_jobs_section">
-                                            <div>
-                                                <img src="" />
-                                                <span style={{ color: '#364E65', fontWeight: 'bold'}}>Frontend Developer</span>
-                                                <span>Trivilia</span>
-                                                <span style={{color: '#364E65'}}><FontAwesomeIcon icon={faMapMarkerAlt} className="dash_content_jobs_ml_icons" />Barcelona, Spain</span>
-                                                <div>
-                                                    <span style={{color: '#3796F6'}}>2 weeks ago</span>
-                                                    <span><FontAwesomeIcon icon={faBookmark} className="dash_content_jobs_ml_icons" /></span>
-                                                </div>
-                                            </div>
+                                        <div className="dash_jobs_section_items">
+                                            {cards}
                                         </div>
                                     </div>
-
                                 </div>
+
+
                             </div>
                         </div>
                     </section>

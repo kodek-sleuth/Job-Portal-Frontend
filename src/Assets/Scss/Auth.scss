@@ -4,14 +4,14 @@
 .auth-wrapper {
     display: grid;
     grid-template-columns: 40% 60%;
-    height: 100vh;
-    background-color: $LightBlue;
+    height: 100%;
 }
 
 .auth-right {
     background-image:  linear-gradient(#262d3d11, #262d3d11), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80');
     background-position: right;
     background-size: cover;
+    min-height: 100vh;
 
     div {
         display: inline-block;
