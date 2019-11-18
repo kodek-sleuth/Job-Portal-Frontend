@@ -13,7 +13,7 @@ import JobCard from '../../Common/Dashboard/JobCard';
 class FindJobs extends Component {
     render() {
         const cards = [];
-        for(let i=1; i<19; i++){
+        for(let i=1; i<10; i++){
             cards.push(
                 <JobCard 
                     containerClass="dash_content_jobs_ml_card_item"
@@ -77,10 +77,11 @@ class FindJobs extends Component {
                                     </div>
 
                                     <div className="dash_jobs_section">
-                                        <span>Showing 9 of 100 results</span>
+                                        
                                         <div className="dash_jobs_section_items">
                                             {cards}
                                         </div>
+                                        <span>Pagination goes here</span>
                                     </div>
                                 </div>
 

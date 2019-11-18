@@ -4,18 +4,18 @@
 .dash_container{
     background-color: $LightBlue;
     color: $DarkBlue;
-    position: relative;
 }
 
 .dash_sidebar{
-    height: 100vh;
+    height: 100%;
     width: 172px;
-    min-width: 120px;
-    position: absolute; 
+    // min-width: 120px;
+    position: fixed; 
     z-index: 1;
     top: 0;
     left: 0;
     background-color: $White; 
+    overflow-x: hidden;
 
     .dash_sidbar_logo{
         display: block;
@@ -63,6 +63,7 @@
 .dash_main_item{
     color: $Grey;
     margin-left: 172px; 
+    position: relative;
 }
 
 .dash_navbar{
@@ -71,6 +72,9 @@
     border-left: 1px solid $LightBlue;
     width: 100%;
     color: $DarkBlue;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     
     .dash_navbar_items{
         @include grid(true);
@@ -101,7 +105,7 @@
 
 
         .dash_logo_nav {
-            margin-right: 75%;
+            margin-right: 60%;
         }
 
 
