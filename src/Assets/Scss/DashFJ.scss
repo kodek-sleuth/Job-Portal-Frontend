@@ -13,17 +13,26 @@
 
 
 .dash_filter_by{
-    background-color: $Black;
+    background-color: $LightBlue;
     height: 100vh;
     // min-height: 100vh;
     padding: 50px;
     padding-top: 5.5%;
     position: fixed;
-    width: 20vw;
+    width: 16vw;
     top: 0;
     overflow: scroll;
+    font-size: 15px;
     // z-index: 1000;
     // top: 0;
+
+    .dash_filter_word{
+        margin-top: 10%;
+        font-weight: bold;
+        color: $DarkBlue;
+        text-decoration: underline;
+        font-size: 17px;
+    }
 }
 
 .dash_filter_items{
@@ -34,7 +43,8 @@
     z-index: 1;
     top: 0;
     left: 0;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
+    
 
     .dash_checkbox_label {
         display: block;
@@ -64,13 +74,13 @@
     
     
     .dash_checkbox_label input:checked ~ .dash_checkbox_custom {
-        background-color: #FFFFFF;
+        background-color: $LightBlue;
         border-radius: 5px;
         -webkit-transform: rotate(0deg) scale(1);
         -ms-transform: rotate(0deg) scale(1);
         transform: rotate(0deg) scale(1);
         opacity:1;
-        border: 2px solid #FFFFFF;
+        border: 2px solid $LightBlue;
     }
     
     
@@ -82,7 +92,7 @@
         height: 0px;
         width: 0px;
         border-radius: 5px;
-        border: solid #009BFF;
+        border: solid $Blue;
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(0deg) scale(0);
         -ms-transform: rotate(0deg) scale(0);
@@ -101,7 +111,7 @@
       top: 3px;
       width: 6px;
       height: 12px;
-      border: solid #009BFF;
+      border: solid $Blue;
       border-width: 0 2px 2px 0;
       background-color: transparent;
       border-radius: 0;
@@ -120,9 +130,10 @@
     height: 100vh;
     width: 65vw;
     position: absolute;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 8%;
     margin-bottom: 10%;
+    overflow: hidden;
 }
 
 .dash_job_search {
@@ -130,9 +141,10 @@
     background-color: $White;
     grid-template-columns: 45% 55%;
     width: inherit;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
     box-shadow: 0 4px 8px 0 #262d3d25;
     top: 10;
+    position: fixed;
 
     .dash_content_search input{
         max-width: 80%;
@@ -141,32 +153,78 @@
 
 .dash_jobs_section{
     width: inherit;
-    position: absolute;
-    margin-bottom: 10%;
+    position: fixed;
+}
 
-    .dash_jobs_section_items{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        overflow: scroll;
-        // height: 100vh;
-        // overflow: scroll;
-        // width: 75vw;
-    }
+.dash_jobs_section_items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 8%;
+}
 
-    .dash_content_jobs_ml_card_item{
-        box-shadow: 0 4px 8px 0 #262d3d25;
-        transition: 0.3s;
-        border-radius: 5px;
-        padding: 10px 16px;
-        margin-right: 25px;
-        background-color: $White;
-        cursor: pointer;
-        margin-top: 5%;
-    }
+.dash_content_jobs_ml_card_item{
+    box-shadow: 0 4px 8px 0 #262d3d25;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px 16px;
+    background-color: $White;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-right: 5%;
 
     img {
         height: 64px;
         width: 64px;
     }
 
+    &:nth-child(3){
+        margin-right: 0;
+    }
+
+    &:nth-child(6){
+        margin-right: 0;
+    }
+
+    &:nth-child(7){
+        margin-bottom: 5%;
+    }
+
+    &:nth-child(8){
+        margin-bottom: 5%;
+    }
+
+    &:nth-child(9){
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+}
+
+.dash_jobs_pagination_container{
+    width: 100%;
+}
+
+.dash_jobs_pagination{
+    display: flex;
+    float: right;
+    background-color: $White;
+    border: 2px solid $DarkBlue;
+    border-radius: 5px;
+
+    span{
+        padding: 5px 15px 5px 15px;
+    }
+}
+
+.dash_pag_icon_left{
+    border-right: 1px solid $DarkBlue;
+    padding: 5px 15px 5px 15px;
+    color: $Blue;
+    cursor: pointer;
+}
+
+.dash_pag_icon_right{
+    border-left: 1px solid $DarkBlue;
+    padding: 5px 20px 5px 20px;
+    color: $Blue;
+    cursor: pointer;
 }

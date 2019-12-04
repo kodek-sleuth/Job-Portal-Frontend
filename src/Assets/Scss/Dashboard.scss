@@ -14,17 +14,22 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: $White; 
+    background-color: #303641;
     overflow-x: hidden;
+    
 
     .dash_sidbar_logo{
         display: block;
         padding: 25px;
         margin-top: 5%;
+        font-weight: bolder;
+        color: $Blue;
     }
 
     ul{
         margin-top: 40%;
+        color: $White;
+        font-weight: 100;
     }
 
     ul li{
@@ -41,7 +46,7 @@
         }
 
         &:hover{
-            background-color: $LightBlue;
+            background-color: #373D48;
             color: $Blue;
         }
     }

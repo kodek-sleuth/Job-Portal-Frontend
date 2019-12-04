@@ -55,47 +55,71 @@
             }
         }
     }
+}
 
-    .dash_content_overview_figures{
-        color: $DarkBlue;
+.dash_content_overview_figures{
+    color: $DarkBlue;
+}
+
+.dash_content_jobs_ml{
+    margin-top: 4%;
+
+    .dash_content_jobs_ml_items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 100%;
     }
 
-    .dash_content_jobs_ml{
-        margin-top: 4%;
-
-        .dash_content_jobs_ml_items{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-
-            img{
-                height: 64px;
-                width: 64px;
-            }
-
-            .dash_content_jobs_ml_icons{
-                margin-right: 5px;
-            }
-
-            .dash_content_jobs_ml_card_item{
-                box-shadow: 0 4px 8px 0 #262d3d25;
-                transition: 0.3s;
-                border-radius: 5px;
-                padding: 10px 16px;
-                margin-right: 25px;
-                background-color: $White;
-                margin-top: 5%;
-                cursor: pointer;
-
-                div{
-                    @include grid(true);
-                    margin-top: 7%;
-
-                    span:nth-child(1){
-                        margin-right: 45%;
-                        border-top: 1px solid $Grey;
-                    }
-                }
-            }
+    .dash_content_jobs_ml_card_item{
+        margin-bottom: 5%;
+        &:nth-child(3){
+            margin-right: 5%;
         }
+        &:nth-child(6){
+            margin-right: 5%;
+        }
+    }
+}
+
+.dash_job_item_img_layout{
+    width: 100%;
+
+
+    img{
+        height: 64px;
+        width: 64px;
+    }
+
+    .dash_job_item_date{
+        color: $Blue;
+        float: right;
+        // margin-left: 10%;
+    }
+
+    .dash_job_item_button{
+        font-weight: 400;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid $Green;
+        font-size: 16px;
+        padding: 5px 30px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+        outline: none;
+        // background-color: $Green;
+        color: $Green;
+
+        &:hover{
+            color: $White;
+            background-color: $Green;
+        }
+    }
+}
+
+.dash_job_item_location{
+    display: flex;
+    color: $DarkBlue;
+
+    span {
+        margin-left: 5%;
     }
 }

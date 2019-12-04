@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { faEnvelope, faMapMarkerAlt, faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import DashbordSidebar from '../../Common/Dashboard/Sidebar/DashboardSidebar';
 import DashbordNavbar from '../../Common/Dashboard/DashbordNavbar';
 import FormInput from '../../Common/Elements/FormInput';
@@ -9,6 +8,7 @@ import '../../../Assets/Scss/Dashboard.scss';
 import '../../../Assets/Scss/DashHome.scss';
 import '../../../Assets/Scss/DashFJ.scss';
 import JobCard from '../../Common/Dashboard/JobCard';
+import Pagination from '../../Common/Dashboard/Pagination';
 
 class FindJobs extends Component {
     render() {
@@ -34,8 +34,8 @@ class FindJobs extends Component {
                             <div className="dash_search_data">
 
                                 <div className="dash_filter_by">
-                                    <span>Filter By</span>
-                                    <span className="dash_filter_salary">Salary Estimate</span>
+                                    <span className="dash_filter_word">Filter By</span>
+                                    <span className="dash_filter_salary">Salary</span>
                                     <div className="dash_salary_filter">
                                         <CheckBox value="200k" divClass="dash_filter_items" />
                                         <CheckBox value="100k" divClass="dash_filter_items" />
@@ -44,7 +44,7 @@ class FindJobs extends Component {
                                         <CheckBox value="80k"  divClass="dash_filter_items" />
                                     </div>
                                     <div>
-                                        <span className="dash_filter_salary">Type of Employment</span>
+                                        <span className="dash_filter_salary">Employment</span>
                                         <CheckBox value="Full-time" divClass="dash_filter_items" />
                                         <CheckBox value="Part-time" divClass="dash_filter_items" />
                                         <CheckBox value="Remote" divClass="dash_filter_items" />
@@ -81,7 +81,8 @@ class FindJobs extends Component {
                                         <div className="dash_jobs_section_items">
                                             {cards}
                                         </div>
-                                        <span>Pagination goes here</span>
+
+                                        <Pagination />
                                     </div>
                                 </div>
 

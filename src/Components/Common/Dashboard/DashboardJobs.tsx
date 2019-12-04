@@ -40,6 +40,40 @@ class DashboardJobs extends Component {
                         date="2 weeks ago"
                         imgLink="https://image.flaticon.com/icons/svg/281/281764.svg"
                     />
+                    <JobCard 
+                        containerClass="dash_content_jobs_ml_card_item"
+                        title="Java Developer"
+                        name="Trivilia"
+                        location="Barcelona, Spain"
+                        date="2 weeks ago"
+                        imgLink="https://image.flaticon.com/icons/svg/281/281764.svg"
+                    />
+                    <JobCard 
+                        containerClass="dash_content_jobs_ml_card_item"
+                        title="Java Developer"
+                        name="Trivilia"
+                        location="Barcelona, Spain"
+                        date="2 weeks ago"
+                        imgLink="https://image.flaticon.com/icons/svg/281/281764.svg"
+                    />
+                    <JobCard 
+                        containerClass="dash_content_jobs_ml_card_item"
+                        title="Java Developer"
+                        name="Trivilia"
+                        location="Barcelona, Spain"
+                        date="2 weeks ago"
+                        imgLink="https://image.flaticon.com/icons/svg/281/281764.svg"
+                    />
+                    <JobCard 
+                        containerClass="dash_content_jobs_ml_card_item"
+                        title="Java Developer"
+                        name="Trivilia"
+                        location="Barcelona, Spain"
+                        date="2 weeks ago"
+                        imgLink="https://image.flaticon.com/icons/svg/281/281764.svg"
+                    />
+
+                    
                 </div>
             </div>
         );
