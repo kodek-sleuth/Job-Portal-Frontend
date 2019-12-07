@@ -37,13 +37,13 @@ class FindJobs extends Component {
                                 <div className="dash_job_search_container">
                                     <div className="dash_job_search">
                                         <FormInput 
-                                            divClassName="dash_content_search dash_content_company"
+                                            divClass="dash_content_search dash_content_company"
                                             inputValue="Job Title"
                                             formIcon={faEnvelope}
                                             inputType="text"
                                         />
                                         <FormInput 
-                                            divClassName="dash_content_search dash_content_location"
+                                            divClass="dash_content_search dash_content_location"
                                             inputValue="Location"
                                             formIcon={faEnvelope}
                                             inputType="text"

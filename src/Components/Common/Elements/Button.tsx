@@ -1,33 +1,41 @@
-import React, { FC } from 'react'
+import React, { FC, MouseEventHandler } from 'react'
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import IconSpanner from './IconSpanner';
 
 interface ButtonProps {
     value: string,
-    classname?: string
+    divClass?: string,
+    btnClass?: string,
+    handleClick?: MouseEventHandler<any>
 }
 
 interface SocialButton {
-  divClassName?: string,
-  spanClassName?: string,
+  divClass?: string,
+  spanClass?: string,
   buttonValue: string,
-  buttonIcon: IconProp
+  buttonIcon: IconProp, 
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const {classname, value} = props
+  const {btnClass, value, handleClick, divClass} = props
   return (
-    <button className={classname}>
-      {value}
-    </button>
+    <div className={divClass}>
+      <button className={btnClass} onClick={handleClick}>
+        {value}
+      </button>
+    </div>
   );
 }
 
 export const SocialButton: FC<SocialButton> = (props) => {
-  const {divClassName, spanClassName, buttonValue, buttonIcon} = props
+  const {divClass, spanClass, buttonValue, buttonIcon} = props
   return (
-    <div className={divClassName}>
-      <span className={spanClassName}><FontAwesomeIcon icon={buttonIcon} /></span>
+    <div className={divClass}>
+      <IconSpanner
+        spanClass={spanClass}
+        spanIcon={buttonIcon}
+      />
       <Button value={buttonValue} />
     </div>
   );

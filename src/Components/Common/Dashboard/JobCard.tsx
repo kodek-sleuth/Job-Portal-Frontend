@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 import { Button } from '../Elements/Button';
+import Image from '../Elements/Image';
+import Spanner from '../Elements/Spanner';
+import IconSpanner from '../Elements/IconSpanner';
 
 
 interface jobCardI {
@@ -21,18 +22,31 @@ class JobCard extends Component<jobCardI> {
         return (
             <div className={containerClass}>
                 <div className="dash_job_item_img_layout">
-                    <img src={imgLink} />
+                    <Image 
+                        imgLink={imgLink}
+                    />
                     <div className="dash_job_item_date">
-                        <span>{date}</span>
-                        <Button value="Save" classname="dash_job_item_button" />
+                        <Spanner 
+                            spanClasses={[""]}
+                            spanValues={[date]}
+                        />
+                        <Button value="Save" btnClass="dash_job_item_button" />
                     </div>
                 </div>
-                
-                <span style={{ color: '#364E65', fontWeight: 'bold'}}>{title}</span>
-                <span>{name}</span>
+
+                <Spanner 
+                    spanClasses={[""]}
+                    spanValues={[title, name]}
+                />
                 <div className="dash_job_item_location">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className="dash_content_jobs_ml_icons" />
-                    <span>{location}</span>
+                    <IconSpanner 
+                        spanIcon={faMapMarkerAlt}
+                        iconClass="dash_content_jobs_ml_icons"
+                    />
+                    <Spanner 
+                        spanClasses={[""]}
+                        spanValues={[location]}
+                    />
                 </div>
             </div>
         );

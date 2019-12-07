@@ -94,19 +94,19 @@ export class Auth extends Component<checkAuth, authState> {
                         <div className="auth-form">
                             <form onSubmit={this.handleSubmitLogin}>
                                 <FormInput 
-                                    divClassName="auth-form-input"
+                                    divClass="auth-form-input"
                                     inputValue="Email"
                                     formIcon={faEnvelope}
                                     inputType="email"
-                                    errorClassName="auth-error-handling"
+                                    errorClass="auth-error-handling"
                                     error={emailError}
                                  />
                                 <FormInput 
-                                    divClassName="auth-form-input"
+                                    divClass="auth-form-input"
                                     inputValue="Password"
                                     formIcon={faKey}
                                     inputType="password"
-                                    errorClassName="auth-error-handling"
+                                    errorClass="auth-error-handling"
                                     error={passwordError}
                                  />
                                 <div className="auth-form-section-two">
@@ -114,14 +114,14 @@ export class Auth extends Component<checkAuth, authState> {
                                     <Input action="submit" value="Login" />
                                 </div>
                                 <SocialButton
-                                    divClassName="auth-social-btns"
-                                    spanClassName="auth-google"
+                                    divClass="auth-social-btns"
+                                    spanClass="auth-google"
                                     buttonIcon={faGoogle}
                                     buttonValue="Login with Google"
                                 />
                                 <SocialButton
-                                    divClassName="auth-social-btns"
-                                    spanClassName="auth-linkedIn"
+                                    divClass="auth-social-btns"
+                                    spanClass="auth-linkedIn"
                                     buttonIcon={faLinkedinIn}
                                     buttonValue="Login with LinkedIn"
                                 />
@@ -147,27 +147,27 @@ export class Auth extends Component<checkAuth, authState> {
                     <div className="auth-form">
                         <form onSubmit={this.handleSubmitSignup}>
                             <FormInput 
-                                divClassName="auth-form-input"
+                                divClass="auth-form-input"
                                 inputValue="Name/Company"
                                 formIcon={faCity}
                                 inputType="text"
-                                errorClassName="auth-error-handling"
+                                errorClass="auth-error-handling"
                                 error={nameError}
                             />
                             <FormInput 
-                                divClassName="auth-form-input"
+                                divClass="auth-form-input"
                                 inputValue="Email"
                                 formIcon={faEnvelope}
                                 inputType="email"
-                                errorClassName="auth-error-handling"
+                                errorClass="auth-error-handling"
                                 error={emailError}
                             />
                             <FormInput 
-                                divClassName="auth-form-input"
+                                divClass="auth-form-input"
                                 inputValue="Password"
                                 formIcon={faKey}
                                 inputType="password"
-                                errorClassName="auth-error-handling"
+                                errorClass="auth-error-handling"
                                 error={passwordError}
                             />
                             <div className="auth-form-section-two">
@@ -175,14 +175,14 @@ export class Auth extends Component<checkAuth, authState> {
                                 <Input action="submit" value="Login" />
                             </div>
                             <SocialButton
-                                divClassName="auth-social-btns"
-                                spanClassName="auth-google"
+                                divClass="auth-social-btns"
+                                spanClass="auth-google"
                                 buttonIcon={faGoogle}
                                 buttonValue="Signup with Google"
                             />
                             <SocialButton
-                                divClassName="auth-social-btns"
-                                spanClassName="auth-linkedIn"
+                                divClass="auth-social-btns"
+                                spanClass="auth-linkedIn"
                                 buttonIcon={faLinkedinIn}
                                 buttonValue="Signup with LinkedIn"
                             />

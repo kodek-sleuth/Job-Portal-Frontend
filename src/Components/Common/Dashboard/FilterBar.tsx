@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CheckBox from '../Elements/CheckBox';
 import CheckBoxContainer from '../Elements/CheckBoxContainer';
 
 interface filterType{
@@ -8,8 +7,6 @@ interface filterType{
 
 class FilterBar extends Component<filterType> {
     render() {
-        const {type} = this.props
-
         return (
             <div className="dash_search_data">
                 <div className="dash_filter_by">

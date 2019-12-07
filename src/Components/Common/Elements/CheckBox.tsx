@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import Spanner from './Spanner';
 
 interface checkBoxI {
     divClass?: string,
@@ -18,7 +19,10 @@ class CheckBox extends Component<checkBoxI> {
                     />
                     <span className="dash_checkbox_custom rectangular"></span>    
                 </label>
-                <span>{value}</span>
+                <Spanner 
+                    spanClasses={[""]}
+                    spanValues={[{value}]}
+                />
             </div>
         );
     }

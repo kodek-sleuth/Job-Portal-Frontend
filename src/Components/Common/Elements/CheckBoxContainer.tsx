@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CheckBox from '../Elements/CheckBox';
+import Spanner from './Spanner';
+
 
 interface checkBoxContainer {
     label: string,
@@ -23,7 +25,10 @@ class CheckBoxContainer extends Component<checkBoxContainer> {
 
         return (
             <div className="dash_salary_filter">
-                <span className="dash_filter_salary">{label}</span>
+                <Spanner 
+                    spanClasses={["dash_filter_salary"]}
+                    spanValues={[label]}
+                />
                 {checkboxes}
             </div>
         ) 

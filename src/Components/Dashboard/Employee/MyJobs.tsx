@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import DashbordSidebar from '../../Common/Dashboard/Sidebar/DashboardSidebar';
 import DashbordNavbar from '../../Common/Dashboard/DashbordNavbar';
-import DashboardSearch from '../../Common/Dashboard/DashboardSearch';
 import Pagination from '../../Common/Dashboard/Pagination';
 import JobCard from '../../Common/Dashboard/JobCard';
 import FormInput from '../../Common/Elements/FormInput';
@@ -31,20 +30,17 @@ class MyJobs extends Component {
                     <section className="dash_main_item">
                         <DashbordNavbar />
                         <div className="dash_content dash_content-fj">
-                            <FilterBar 
-                            
-                            />
-
+                            <FilterBar />
                             <div className="dash_job_search_container my_job_search_container">
                                 <div className="dash_job_search">
                                     <FormInput 
-                                        divClassName="dash_content_search dash_content_company"
+                                        divClass="dash_content_search dash_content_company"
                                         inputValue="Job Title"
                                         formIcon={faEnvelope}
                                         inputType="text"
                                     />
                                     <FormInput 
-                                        divClassName="dash_content_search dash_content_location"
+                                        divClass="dash_content_search dash_content_location"
                                         inputValue="Location"
                                         formIcon={faEnvelope}
                                         inputType="text"

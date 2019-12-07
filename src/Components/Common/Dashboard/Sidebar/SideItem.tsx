@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import IconSpanner from '../../Elements/IconSpanner';
+
 
 interface SideItemI {
     active?: boolean,
@@ -13,7 +14,7 @@ class SideItem extends Component<SideItemI> {
         const { active, icon, name } = this.props
         return (
             <li className={active ? "dash_item_active": ""}>
-                <span><FontAwesomeIcon icon={icon} className="dash_icons_sidebar" />{name}</span>
+                <IconSpanner spanIcon={icon} spanClass="dash_icons_sidebar" spanValue={name} />
             </li>
         ); 
     }

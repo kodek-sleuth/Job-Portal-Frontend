@@ -4,36 +4,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Input from './Input'
 
 interface InputProps {
-    divClassName?: string,
+    divClass?: string,
     formIcon: IconProp,
     inputType: string,
     inputValue: string,
     inputName?: string
-    inputClassName?: string
-    errorClassName?: string
+    inputClass?: string
+    errorClass?: string
     error?: string
     location?: boolean
 }
 
 const FormInput: FC<InputProps> = (props) => {
-    const {divClassName, inputValue, inputName, inputType, formIcon, 
-        inputClassName, error, errorClassName, location} = props
+    const {divClass, inputValue, inputName, inputType, formIcon, 
+        inputClass, error, errorClass, location} = props
     if(location){
         return(
-            <div className={divClassName}>
+            <div className={divClass}>
                 <span><FontAwesomeIcon icon={formIcon} /></span>
-                <Input value={inputValue} classname={inputClassName} action={inputType}/>
+                <Input value={inputValue} classname={inputClass} action={inputType}/>
                 <Input classname="dash_button_search" action="submit" value="Search" />
             </div>
         )
     }
     return (
         <div>
-            <div className={divClassName}>
+            <div className={divClass}>
                 <span><FontAwesomeIcon icon={formIcon} /></span>
-                <Input value={inputValue} classname={inputClassName} action={inputType}/>
+                <Input value={inputValue} classname={inputClass} action={inputType}/>
             </div>
-            <div className={errorClassName}>
+            <div className={errorClass}>
                 <span>{error}</span>
             </div>
         </div>

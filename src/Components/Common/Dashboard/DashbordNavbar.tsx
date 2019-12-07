@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { faBell, faCommentAlt } from "@fortawesome/free-regular-svg-icons";
 import { faSortDown } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Spanner from '../Elements/Spanner';
+import IconSpanner from '../Elements/IconSpanner';
 
 class DashbordNavbar extends Component {
     render() {
@@ -9,12 +10,12 @@ class DashbordNavbar extends Component {
             <nav>
                 <div className="dash_navbar">
                     <div className="dash_navbar_items">
-                        <span className="dash_logo_nav">WH</span>
+                        <Spanner spanClasses={["dash_logo_nav"]} spanValues={["WH"]} /> 
                         <ul>
-                            <li><span><FontAwesomeIcon icon={faBell} className="dash_navbar-icons" /></span></li>
-                            <li><span><FontAwesomeIcon icon={faCommentAlt} className="dash_navbar-icons" /></span></li>
-                            <li><div><span>MJ</span></div></li>
-                            <li><span><FontAwesomeIcon icon={faSortDown} className="dash_last_icon"/></span></li>
+                            <li><IconSpanner spanIcon={faBell} spanClass="dash_navbar-icon" /></li>
+                            <li><IconSpanner spanIcon={faCommentAlt} spanClass="dash_navbar-icon" /></li>
+                            <li><Spanner spanClasses={[""]} spanValues={["MJ"]} /> </li>
+                            <li><IconSpanner spanIcon={faSortDown} spanClass="dash_last_icon" /></li>
                         </ul>
                     </div>
                 </div>

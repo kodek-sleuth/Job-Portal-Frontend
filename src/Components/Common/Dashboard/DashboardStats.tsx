@@ -1,45 +1,68 @@
 import React, { Component } from 'react';
 import { faHandshake, faMoneyBillAlt } from "@fortawesome/free-regular-svg-icons";
 import { faUsers, faBriefcase, faCity} from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Spanner from '../Elements/Spanner';
+import IconSpanner from '../Elements/IconSpanner';
+
 
 class DashboardStats extends Component {
     render() {
         return (
             <div className="dash_content_overview">
-                <span style={{color: '#364E65', fontWeight: 'bold'}}>Quick overview</span>
+                <Spanner 
+                    spanValues={["Quick overview"]}
+                    spanClasses={[""]}
+                />
                 <div className="dash_content_overview_items">
                     <div>
-                        <span><FontAwesomeIcon icon={faBriefcase} style={{ color: '#3796F6'}} /></span>
-                        <span>Total Jobs</span>
-                        <span className="dash_content_overview_figures">345,789</span>
+                        <IconSpanner spanIcon={faBriefcase} />
+                        <Spanner 
+                            spanValues={["Total Jobs", "345,789"]}
+                            spanClasses={["", "dash_content_overview_figures"]}
+                        />
                     </div>
                     <div>
-                        <span><FontAwesomeIcon icon={faUsers} style={{ color: '#5BCEAE'}} /></span>
-                        <span>Users</span>
-                        <span className="dash_content_overview_figures">89</span>
+                        <IconSpanner spanIcon={faUsers} />
+                        <Spanner 
+                            spanValues={["Users", "89"]}
+                            spanClasses={["", "dash_content_overview_figures"]}
+                        />
                     </div>
                     <div>
-                        <span><FontAwesomeIcon icon={faCity} style={{ color: '#EC547A'}}  /></span>
-                        <span>Companies</span>
-                        <span className="dash_content_overview_figures">35,489</span>
+                        <IconSpanner spanIcon={faCity} />
+                        <Spanner 
+                            spanValues={["Companies", "35,489"]}
+                            spanClasses={["", "dash_content_overview_figures"]}
+                        />
                     </div>
                     <div>
-                        <span><FontAwesomeIcon icon={faHandshake} style={{ color: '#FF790E'}} /></span>
-                        <span>Daily Hires</span>
-                        <span className="dash_content_overview_figures">3789</span>
+                        <IconSpanner spanIcon={faHandshake} />
+                        <Spanner 
+                            spanValues={["Daily Hires", "3589"]}
+                            spanClasses={["", "dash_content_overview_figures"]}
+                        />
                     </div>
                     <div className="dash_content_overview_card">
-                        <span style={{ color: '#364E65', fontWeight: 'bold'}}>Most Posted Jobs</span>
-                        <span><FontAwesomeIcon icon={faBriefcase} className="dash_content_overview_icons" style={{ color: '#3796F6'}} /></span>
-                        <span style={{color: '#3796F6'}}>Career: Data Science</span>
-                        <span>Hires: 1000/week</span>
+                        <Spanner 
+                            spanValues={["Most Posted Jobs"]}
+                            spanClasses={[""]}
+                        />
+                        <IconSpanner spanIcon={faBriefcase} iconClass="dash_content_overview_icons" />
+                        <Spanner 
+                            spanValues={["Career: Data Science", "Hires: 1000/week"]}
+                            spanClasses={["", "dash_content_overview_figures"]}
+                        />
                     </div>
                     <div className="dash_content_overview_card">
-                        <span style={{ color: '#364E65', fontWeight: 'bold'}}>Higest Paid Career</span>
-                        <span><FontAwesomeIcon icon={faMoneyBillAlt} className="dash_content_overview_icons" style={{ color: '#5BCEAE'}} /></span>
-                        <span style={{color: '#3796F6'}}>Career: Data Science</span>
-                        <span style={{color: '#EC547A'}}>Salary: $250,000/yr</span>
+                        <Spanner 
+                            spanValues={["Higest Paid Career"]}
+                            spanClasses={[""]}
+                        />
+                        <IconSpanner spanIcon={faMoneyBillAlt} iconClass="dash_content_overview_icons" />
+                        <Spanner 
+                            spanValues={["Career: Data Science", "Hires: 1000/week"]}
+                            spanClasses={["", "dash_content_overview_figures"]}
+                        />
                     </div>
                 </div>
             </div>

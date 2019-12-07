@@ -4,13 +4,14 @@
 .dash_container{
     background-color: $LightBlue;
     color: $DarkBlue;
+    width: 100vw;
 }
 
 .dash_sidebar{
+    position: fixed; 
     height: 100%;
     width: 172px;
-    // min-width: 120px;
-    position: fixed; 
+    min-width: 120px;
     z-index: 1;
     top: 0;
     left: 0;
