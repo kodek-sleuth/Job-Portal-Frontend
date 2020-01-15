@@ -14,7 +14,7 @@ class SideItem extends Component<SideItemI> {
         const { active, icon, name } = this.props
         return (
             <li className={active ? "dash_item_active": ""}>
-                <IconSpanner spanIcon={icon} spanClass="dash_icons_sidebar" spanValue={name} />
+                <IconSpanner spanIcon={icon} spanClass="dash_icons_sidebar" spanValue={name} innerClass="dash_icon_name" />   
             </li>
         ); 
     }

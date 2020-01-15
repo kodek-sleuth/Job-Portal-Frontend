@@ -21,7 +21,7 @@ class CheckBox extends Component<checkBoxI> {
                 </label>
                 <Spanner 
                     spanClasses={[""]}
-                    spanValues={[{value}]}
+                    spanValues={[value]}
                 />
             </div>
         );

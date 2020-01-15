@@ -24,27 +24,33 @@ class JobCard extends Component<jobCardI> {
                 <div className="dash_job_item_img_layout">
                     <Image 
                         imgLink={imgLink}
+                        divClass="dash_job_image"
                     />
+
                     <div className="dash_job_item_date">
-                        <Spanner 
-                            spanClasses={[""]}
-                            spanValues={[date]}
-                        />
-                        <Button value="Save" btnClass="dash_job_item_button" />
+                        <div>
+                            <Spanner 
+                                spanClasses={[""]}
+                                spanValues={[date]}
+                            />
+                            <Button value="Save" btnClass="dash_job_item_button" />
+                        </div>
                     </div>
                 </div>
 
                 <Spanner 
-                    spanClasses={[""]}
+                    divClass="dash_title_name"
+                    spanClasses={["dash_title_tt", "dash_title_nm"]}
                     spanValues={[title, name]}
                 />
                 <div className="dash_job_item_location">
                     <IconSpanner 
+                        divClass="dash_job_location_icon"
                         spanIcon={faMapMarkerAlt}
                         iconClass="dash_content_jobs_ml_icons"
                     />
                     <Spanner 
-                        spanClasses={[""]}
+                        spanClasses={["d"]}
                         spanValues={[location]}
                     />
                 </div>

@@ -13,8 +13,9 @@ class Pagination extends Component {
                         spanIcon={faChevronLeft}
                     />
                     <Spanner 
+                        divClass="dash_pag_numb"
                         spanClasses={[""]}
-                        spanValues={["1 or 10"]}
+                        spanValues={["1 of 10"]}
                     />
                     <IconSpanner 
                         divClass="dash_pag_icon_right"

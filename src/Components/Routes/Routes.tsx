@@ -18,7 +18,7 @@ const Routes: FC = () => (
                     <Route exact path="/employee" component={DBS} />
                     <Route path="/employee/find-jobs" component={FJ} />
                     <Route path="/employee/my-jobs" component={MJB} />
-                    <Route path="/employee/messages" component={MS} />
+                    <Route path="/messages" component={MS} />
                     <Route path="/employee/profile" component={PF} />
                 </Fragment>
             </Switch>

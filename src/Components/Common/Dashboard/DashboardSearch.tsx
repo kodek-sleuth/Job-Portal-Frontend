@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { faSearchDollar } from "@fortawesome/free-solid-svg-icons"
 import Spanner from '../Elements/Spanner';
 import IconSpanner from '../Elements/IconSpanner';
+import Input from '../Elements/Input';
 
 class DashboardSearch extends Component {
     render() {
@@ -14,7 +15,7 @@ class DashboardSearch extends Component {
                     />
                     <div className="dash_content_search">
                         <IconSpanner spanIcon={faSearchDollar} iconClass="dash_content_search_icon" />
-                        <input type="text" value="Search for Jobs" />
+                        <Input value="Search for Jobs" action="text" />
                     </div>
                 </div>
             </div>

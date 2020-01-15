@@ -13,7 +13,7 @@ interface checkBoxContainer {
 class CheckBoxContainer extends Component<checkBoxContainer> {
     render() {
         const {label, values, classname} = this.props;
-        const checkboxes = []
+        const checkboxes = [];
         for(let x=0; x<values.length; x++){
             checkboxes.push(
                 <CheckBox 

@@ -7,18 +7,20 @@ interface iconSpannerI {
     divClass?: string,
     spanClass?: string,
     iconClass?: string,
-    spanValue?: string
+    spanValue?: string,
+    innerClass?: string,
+    iconColor?: string
 }
 
 class IconSpanner extends Component<iconSpannerI> {
     render() {
-        const {spanClass, spanIcon, iconClass, divClass, spanValue} = this.props
+        const {spanClass, spanIcon, iconClass, divClass, spanValue, innerClass, iconColor} = this.props
         
         return (
             <div className={divClass}>
                 <span className={spanClass}>
-                    <FontAwesomeIcon icon={spanIcon} className={iconClass} />
-                    {spanValue}
+                    <FontAwesomeIcon icon={spanIcon} className={iconClass} style={{ color: iconColor }} />
+                    <span className={innerClass} style={ !spanValue ? {display: "none"}: {} }>{spanValue}</span>
                 </span>
             </div>
         );

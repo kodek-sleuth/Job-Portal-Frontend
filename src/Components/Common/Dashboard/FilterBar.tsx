@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CheckBoxContainer from '../Elements/CheckBoxContainer';
+import Spanner from '../Elements/Spanner';
 
 interface filterType{
     type?: string
@@ -10,7 +11,7 @@ class FilterBar extends Component<filterType> {
         return (
             <div className="dash_search_data">
                 <div className="dash_filter_by">
-                    <span className="dash_filter_word">Filter By</span>
+                    <Spanner spanValues={["Filter By"]} spanClasses={["dash_filter_word"]} />
                     <CheckBoxContainer 
                         label="Type" 
                         values={['All', 'Saved', 'Applied', 'Hired']}  
