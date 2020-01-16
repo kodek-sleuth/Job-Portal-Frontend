@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import FindJobs from '../../../Dashboard/Employee/FindJobs'
+import { Company as CO } from '../../../Dashboard/Employee/Company'
 
-class FJ extends Component {
+class Company extends Component {
     render() {
         return (
             <Fragment>
-                <FindJobs />
+                <CO />
             </Fragment>
         );
     }
 }
 
-export default FJ;
+export default Company;

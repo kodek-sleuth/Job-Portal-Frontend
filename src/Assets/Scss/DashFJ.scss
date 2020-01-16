@@ -237,9 +237,14 @@
     display: flex;
     color: $DarkBlue;
     font-size: 14.5px;
+    width: 100%;
 
     .dash_job_location_icon{
         margin-right: 10px;
+    }
+
+    .dash_job_bk_icon{
+        margin-left: 15px;
     }
 }
 

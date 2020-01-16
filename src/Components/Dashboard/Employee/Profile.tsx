@@ -31,7 +31,7 @@ class Profile extends Component {
                                     <div className="profile_side_pt_data"> 
                                         <Image 
                                             divClass="img_container"
-                                            imgLink="ttps://image.flaticon.com/icons/svg/684/684196.svg"
+                                            imgLink="https://image.flaticon.com/icons/svg/684/684196.svg"
                                         />  
                                         <div className="profile_main_info">
                                             <Spanner 
@@ -142,4 +142,4 @@ class Profile extends Component {
     }
 }
 
-export default Profile;
+export { Profile };

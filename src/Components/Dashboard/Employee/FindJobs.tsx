@@ -67,4 +67,4 @@ class FindJobs extends Component {
     }
 }
 
-export default FindJobs;
+export { FindJobs };

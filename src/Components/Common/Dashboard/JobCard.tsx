@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+import { faMapMarkerAlt, faBookmark } from "@fortawesome/free-solid-svg-icons"
+import { faBookmark as Bk } from "@fortawesome/free-regular-svg-icons"
 import { Button } from '../Elements/Button';
 import Image from '../Elements/Image';
 import Spanner from '../Elements/Spanner';
@@ -33,7 +34,7 @@ class JobCard extends Component<jobCardI> {
                                 spanClasses={[""]}
                                 spanValues={[date]}
                             />
-                            <Button value="Save" btnClass="dash_job_item_button" />
+                            <Button value="Apply" btnClass="dash_job_item_button" />
                         </div>
                     </div>
                 </div>
@@ -50,7 +51,7 @@ class JobCard extends Component<jobCardI> {
                         iconClass="dash_content_jobs_ml_icons"
                     />
                     <Spanner 
-                        spanClasses={["d"]}
+                        spanClasses={[""]}
                         spanValues={[location]}
                     />
                 </div>

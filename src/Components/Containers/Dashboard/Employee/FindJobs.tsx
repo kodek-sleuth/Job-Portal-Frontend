@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import Dashboard from '../../../Dashboard/Employee/Dashboard'
+import { FindJobs as FJ} from '../../../Dashboard/Employee/FindJobs'
 
-class DBS extends Component {
+class FindJobs extends Component {
     render() {
         return (
             <Fragment>
-                <Dashboard />
+                <FJ />
             </Fragment>
         );
     }
 }
 
-export default DBS;
+export default FindJobs;

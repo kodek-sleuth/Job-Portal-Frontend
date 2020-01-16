@@ -6,7 +6,8 @@ import DashboardStats from '../../Common/Dashboard/DashboardStats';
 import '../../../Assets/Scss/Dashboard.scss'
 import '../../../Assets/Scss/DashHome.scss';
 
-class Dashboard extends Component {
+
+class Company extends Component {
     render() {
         return (
             <Fragment>
@@ -15,8 +16,7 @@ class Dashboard extends Component {
                     <section className="dash_main_item">
                         <DashbordNavbar />
                         <div className="dash_content">
-                            <DashboardSearch />
-                            <DashboardStats />
+                            
                         </div>
                     </section>
                 </div>
@@ -25,4 +25,4 @@ class Dashboard extends Component {
     }
 }
 
-export { Dashboard };
+export { Company };
